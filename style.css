@@ -36,8 +36,8 @@ body {
   letter-spacing: 0.05em;
 }
 
+/* Styles for container that holds all content on the page */
 .container {
-  /* Mock size made to emulate a page full of cotent */
   min-height: 100vh;
 }
 
@@ -60,7 +60,7 @@ a:hover {
 /*---------------------------------------------
 VIDEO PLAYER
 ----------------------------------------------*/
-
+/* Styles for video player container that holds the video */
 .player {
   background-color: white;
   position: absolute;
@@ -126,7 +126,7 @@ NAV
 }
 
 /*---------------------------------------------
-LEFT COLUMN
+DIV: LEFT COLUMN
 ----------------------------------------------*/
 /* Styles for the width of the left column */
 .col-left {
@@ -137,7 +137,7 @@ LEFT COLUMN
 }
 
 /*---------------------------------------------
-CONTACT
+SECTION: CONTACT
 ----------------------------------------------*/
 .contact {
   background-color: rgb(255, 255, 255);
@@ -159,10 +159,11 @@ CONTACT
 /* Styles for the bottom lowercase information at bottom */
 .contact .footnote {
   text-transform: none;
+  padding-top: 21px;
 }
 
 /*---------------------------------------------
-ABOUT
+SECTION: ABOUT
 ----------------------------------------------*/
 /* Styles for the bottom of the about section */
 .padding-bottom {
@@ -174,28 +175,29 @@ ABOUT
 }
 
 /*---------------------------------------------
-RIGHT COLUMN
+DIV: RIGHT COLUMN
 ----------------------------------------------*/
 /* Styles for the width of the right column */
 .col-right {
   flex-basis: 894px;
   flex-grow: 1.7;
   flex-shrink: 1.7;
-  z-index: -5;
 }
 
 /*---------------------------------------------
-PROJECTS
+SECTION: PROJECTS
 ----------------------------------------------*/
 /* Styles for the projects section*/
 .projects .image {
   background-image: url(images/IMG_8375.JPG);
   min-height: 616px;
   background-size: cover;
+  background-position: center center;
   position: relative;
+  z-index: -5;
 }
 
-/* Styles for the projects */
+/* Styles for the placehoder text */
 .projects .placeholder {
   position: absolute;
   top: 50%;
@@ -206,36 +208,113 @@ PROJECTS
   transform: translateX(-50%);
 
   font-size: 60px;
+  line-height: 40px;
   text-align: center;
   color: rgb(255, 255, 255);
 }
 
-
 /*---------------------------------------------
 ANIMATIONS
 ---------------------------------------------- */
-
 /* Styles for close button */
 .close {
   text-align: right;
 }
 
 /* Styles to make project heading look like the others, but is not intearctive yet */
-.disable {
-  width: 100%;
-  padding: 19px 0px 14px 0;
-  border-bottom: solid black 1.6px;
+.disable:hover {
+  color: black;
 }
 
 /*---------------------------------------------
-TABLET (lanscape: 1024px / portrait: 768px)
-----------------------------------------------
+TABLET (landscape: 1024px / portrait: 768px)
+----------------------------------------------*/
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  /*---------FONT SIZE FOR ENTIRE PAGE--------- */
+  body {
+    font-size: 21px;
+    line-height: 25px;
+  }
 
+  /*---------PLACEHOLDER TEXT--------- */
+  /* Styles for the placeholder project text */
+  .projects .placeholder {
+    font-size: 43px;
+    line-height: 30px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  /*----CUSTOM CURSOR TURNED INTO IMAGE------ */
+  /* Styles for the cursor image */
+  .custom-cursor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+
+    transform: translateX(-50%);
+  }
+
+  /*---------CONTAINERS--------- */
+  /* Styles for the cursor image (stacking columns) */
+  .content {
+    flex-wrap: wrap;
+    max-width: 768px;
+    padding: 0 14px;
+    cursor: pointer;
+  }
+
+  /* Styles for the left and right columns */
+  .col-left,
+  .col-right  {
+    flex-basis: 602px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-right: 0;
+  }
+
+  /*---------TEXT--------- */
+  /* Styles for all titels */
+  .title {
+    padding: 14px 0px 17px 0;
+  }
+
+  /* Styles for all text */
+  .text {
+    margin-right: 10px;
+    padding: 0;
+  }
+
+  /* Styles for the about text container */
+  .intro {
+    padding: 7.5px 0 24px 0;
+  }
+
+  /* Styles for about text */
+  .intro .text {
+    padding-top: 18.5px;
+  }
+
+  /* Styles for the contact details container */
+  .details {
+    padding: 17px 0 6px 0;
+  }
+}
 
 /*---------------------------------------------
-MOBILE (lanscape:---px / portrait: 375px)
-----------------------------------------------
+MOBILE (landscape: 667px / portrait: 375px)
+----------------------------------------------*/
+/* Mobile landscape */
 
+
+/* Mobile portrait */
 @media (max-width: 375px) {
-
-}*/
+  /*---------FONT SIZE FOR ENTIRE PAGE--------- */
+  body {
+    min-width: 375px;
+  }
+}
