@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Organ Studio</title>
@@ -19,17 +20,17 @@
       <video class="video" src="video/ISCOC-WS-EDIT-7-V1.mp4" autoplay preload loop muted>
       </video>
 
-      <audio class="sound" src="sound/ORGAN-AUDIO_B2-V1.mp3" autoplay preload loop>
+      <audio class="sound" src="sound/ORGAN-AUDIO_B2-V1.mp3">
       </audio>
     </div>
 
     <div class="content">
 
       <div class="col-left">
-        <section class="about">
+        <section class="about accordeon">
           <div class="heading">
-            <h1 class="title">About</h1>
-            <h1 class="title close">Close</h1>
+            <h1 class="title clickable expand">About</h1>
+            <h1 class="title clickable close">Close</h1>
           </div>
           <div class="intro">
             <p class="text"> ORGAN is a multidisciplinary studio incorporating creative direction, image-making and design, and the combined practice of photographer Norman Wilcox-Geissen and graphic designer Maja Larsson.</br>
@@ -38,12 +39,12 @@
           </div>
         </section>
 
-        <section class="contact">
+        <section class="contact accordeon">
           <div class="heading">
-            <h1 class="title">Contact</h1>
-            <h1 class="title close">Close</h1>
+            <h1 class="title clickable expand">Contact</h1>
+            <h1 class="title clickable close">Close</h1>
           </div>
-          <div class="details">
+          <div class="intro">
             <p class="text">ORGAN Studio</br>
               2 Abney Gardens</br>
               London N16 7HE</br>
@@ -61,9 +62,9 @@
       </div>
 
       <div class="col-right">
-        <section class="projects">
+        <section class="projects accordeon">
           <div class="heading">
-            <h1 class="title">Projects</h1>
+            <h1 class="title clickable">Projects</h1>
           </div>
           <div class="image">
             <p class="placeholder">Coming soon</p>
@@ -76,6 +77,8 @@
 
   <script src="jquery.js"></script>
   <script src="main.js"></script>
+  <script src="object-fit-videos.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </body>
 </html>
