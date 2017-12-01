@@ -21,7 +21,6 @@ FONT
 /*------------------------------------------
 ENTIRE PAGE
 --------------------------------------------*/
-
 /* Styles for container of both video and content */
 body {
   /* Styles for background*/
@@ -34,6 +33,7 @@ body {
   color: rgb(0, 0, 0);
   font-weight: normal;
   letter-spacing: 0.05em;
+  overflow: hidden;
 }
 
 /* Styles for container that holds all content on the page */
@@ -55,6 +55,7 @@ a {
 /* Styles for links on hover */
 a:hover {
   color: rgb(128, 128, 128);
+  cursor: pointer;
 }
 
 /*---------------------------------------------
@@ -77,6 +78,10 @@ VIDEO PLAYER
   z-index: 5;
   /* Style to remove cursor to be replced by image that follows the mouse */
   cursor: none;
+  /* Style to fit the video to the full window */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /* Styles for custom cursor: img with following mouse in jquery */
@@ -118,11 +123,6 @@ NAV
   width: 100%;
   padding: 19px 0px 14px 0;
   border-bottom: solid black 1.6px;
-}
-
-/* Styles for titles in the nav on hover */
-.title:hover {
-  color: rgb(128, 128, 128);
 }
 
 /*---------------------------------------------
@@ -180,8 +180,8 @@ DIV: RIGHT COLUMN
 /* Styles for the width of the right column */
 .col-right {
   flex-basis: 894px;
-  flex-grow: 1.7;
-  flex-shrink: 1.7;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 /*---------------------------------------------
@@ -224,6 +224,13 @@ ANIMATIONS
 /* Styles to make project heading look like the others, but is not intearctive yet */
 .disable:hover {
   color: black;
+  cursor: default;
+}
+
+/* Styles for titles in the nav on hover */
+.clickable:hover {
+  color: rgb(128, 128, 128);
+  cursor: pointer;
 }
 
 /*---------------------------------------------
@@ -231,13 +238,85 @@ TABLET (landscape: 1024px / portrait: 768px)
 ----------------------------------------------*/
 /* Tablet landscape */
 @media (max-width: 1024px) {
-  /*---------FONT SIZE FOR ENTIRE PAGE--------- */
-  body {
-    font-size: 21px;
-    line-height: 25px;
+  /*---------CONTAINERS--------- */
+  /* Styles for the content container (stacking columns) */
+  .content {
+    padding: 0 18px;
   }
 
-  /*---------PLACEHOLDER TEXT--------- */
+  /* Styles for the left and right columns */
+  .col-left,
+  .col-right  {
+    flex-basis: 476px;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  /* Style for space between the left and right columns */
+  .col-right {
+    margin-right: 35px;
+  }
+
+  /* removing space to the right of the right column */
+  .col-right {
+    margin-right: 0px;
+  }
+
+  /* Styles for the projects image */
+  .projects .image {
+    background-image: url(images/IMG_8375.JPG);
+    min-height: 385px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: -5;
+  }
+
+  /*---------TEXT--------- */
+  /* Styles for the font size for the entire page */
+  body {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /* Styles for text in the headings in the nav*/
+  .title {
+    padding: 12px 0px 13px 0;
+  }
+
+  /* Styles for text on page*/
+  .text {
+    margin-right: 84px;
+    padding: 0;
+  }
+
+  /* Styles for the about text container */
+  .intro {
+    padding: 0.5px 0 24px 0;
+  }
+
+  /* Styles for about text */
+  .intro .text {
+    padding-top: 14.5px;
+  }
+
+  /* Styles for the contact details container */
+  .details {
+    padding-top: 16px;
+  }
+
+  /* Styles for the contact detail text */
+  .details .text {
+    padding: 12.5px 0 12.5px 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  /* Styles for the contact detail text */
+  .details .footnote {
+    padding-top: 28.5px;
+  }
+
   /* Styles for the placeholder project text */
   .projects .placeholder {
     font-size: 43px;
@@ -260,7 +339,7 @@ TABLET (landscape: 1024px / portrait: 768px)
   }
 
   /*---------CONTAINERS--------- */
-  /* Styles for the cursor image (stacking columns) */
+  /* Styles for the content container (stacking columns) */
   .content {
     flex-wrap: wrap;
     max-width: 768px;
@@ -278,6 +357,12 @@ TABLET (landscape: 1024px / portrait: 768px)
   }
 
   /*---------TEXT--------- */
+  /* Styles for the font size for the entire page */
+  body {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
   /* Styles for all titels */
   .title {
     padding: 14px 0px 17px 0;
@@ -309,12 +394,10 @@ TABLET (landscape: 1024px / portrait: 768px)
 MOBILE (landscape: 667px / portrait: 375px)
 ----------------------------------------------*/
 /* Mobile landscape */
-
-
-/* Mobile portrait */
-@media (max-width: 375px) {
+@media (max-width: 667px) {
   /*---------FONT SIZE FOR ENTIRE PAGE--------- */
   body {
-    min-width: 375px;
+    font-size: 21px;
+    line-height: 25px;
   }
 }

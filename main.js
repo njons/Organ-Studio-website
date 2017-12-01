@@ -33,6 +33,10 @@ $('.about .title').on('click', function() {
   $('.about').addClass('border-bottom');
   // shows the Close button
   $('.about .close').show();
+  // removes the styles that indicate that about can be clicked
+  $('.about .title').removeClass('clickable');
+  // adds styles that indicate that the 'Close' button can be clicked
+  $('.about .close').addClass('clickable');
 
   // closes the contacts section (in case it is open):
     // hides the text
@@ -50,6 +54,10 @@ $('.contact .title').on('click', function() {
   $('.details').show('slow');
   // shows the 'Close' button
   $('.contact .close').show();
+  // removes the styles that indicate that contact can be clicked
+  $('.contact .title').removeClass('clickable');
+  // adds styles that indicate that the 'Close' button can be clicked
+  $('.contact .close').addClass('clickable');
 
   // closes the about section (in case it is open):
     // hides the text
@@ -71,7 +79,7 @@ $(document).ready( function () {
   console.log(windowWidth);
 
   /*---------------------------------------------
-  MOBILE AND TABLET(portrait) INTERACTIONS
+  MOBILE AND TABLET (portrait) INTERACTIONS
   ---------------------------------------------- */
   if (windowWidth < 768) {
     // mutes sound
