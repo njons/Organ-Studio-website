@@ -36,6 +36,11 @@ body {
   letter-spacing: 0.05em;
 }
 
+.container {
+  /* Mock size made to emulate a page full of cotent */
+  min-height: 100vh;
+}
+
 /* Style for images */
 img {
   width: 100%;
@@ -52,31 +57,35 @@ a:hover {
   color: rgb(128, 128, 128);
 }
 
-
 /*---------------------------------------------
 VIDEO PLAYER
 ----------------------------------------------*/
 
-/* Styles for video player*/
-.video {
-  height: 100vh;
-  overflow: hidden;
-  background-image: url(images/IMG_8378.JPG);
-  background-size: cover;
-
-  /* Position of video player */
+.player {
+  background-color: white;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-
-  z-index: 5;
 }
 
-/* Styles for custom cursor*/
-.cursor {
-  cursor: url(cursor/ORGAN_Cursor_200px.png);
+/* Styles for video player*/
+.video {
+  height: 100vh;
+  overflow: hidden;
+  z-index: 5;
+  /* Style to remove cursor to be replced by image that follows the mouse */
+  cursor: none;
+}
+
+/* Styles for custom cursor: img with following mouse in jquery */
+.cursor-custom {
+  position: absolute;
+  width: 100px;
+  height: 21.5px;
+  left: -100px;
+  cursor: none;
 }
 
 /*---------------------------------------------
@@ -87,8 +96,6 @@ CONTENT
 .content {
   display: flex;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0 20px;
 }
 
@@ -125,6 +132,7 @@ LEFT COLUMN
 .col-left {
   flex-basis: 629px;
   flex-grow: 1;
+  flex-shrink: 1;
   margin-right: 60px;
 }
 
@@ -171,7 +179,9 @@ RIGHT COLUMN
 /* Styles for the width of the right column */
 .col-right {
   flex-basis: 894px;
-  flex-grow: 1;
+  flex-grow: 1.7;
+  flex-shrink: 1.7;
+  z-index: -5;
 }
 
 /*---------------------------------------------
@@ -218,12 +228,12 @@ ANIMATIONS
 }
 
 /*---------------------------------------------
-TABLET
+TABLET (lanscape: 1024px / portrait: 768px)
 ----------------------------------------------
 
 
 /*---------------------------------------------
-MOBILE
+MOBILE (lanscape:---px / portrait: 375px)
 ----------------------------------------------
 
 @media (max-width: 375px) {
