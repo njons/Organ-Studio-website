@@ -79,7 +79,6 @@ VIDEO PLAYER
   height: 21.5px;
   left: -100px;
   cursor: none;
-  pointer-events: none;
 }
 
 /*---------------------------------------------
@@ -105,8 +104,52 @@ CONTENT
 }
 
 /*---------------------------------------------
+ACCORDION
+----------------------------------------------*/
+/* Styles for hovering the headings */
+.accordion .title:hover {
+  color: rgb(128, 128, 128);
+}
+
+/* Styles for making the cursor a pointer when hovering the headings */
+.accordion .title {
+  cursor: pointer;
+}
+
+/* Styles for making the cursor a default cursor when hovering the headings once the content has been expanded */
+.accordion.open .title.expand {
+  cursor: default;
+}
+
+/* Styles for keeping the colour of the hadings the same upon hovering the headings once the content has been expanded */
+.accordion.open .title.expand:hover {
+  color: inherit;
+}
+
+/* Styles for displaying the close buttons when the content has been expanded */
+.accordion.open .close {
+  display: block;
+}
+
+/* Styles for adding the bottom border when a heading is open*/
+.accordion.open {
+  border-bottom: solid black 1.6px;
+}
+
+/* Styles for hiding the bottom border when the contact section is open*/
+.accordion.contact.open {
+  border-bottom-width: 0;
+}
+
+/*---------------------------------------------
 NAV
 ----------------------------------------------*/
+/* Styles for hiding the content and the close buttons in the nav before click */
+.intro,
+.close {
+  display: none;
+}
+
 /* Styles for the headings in the nav*/
 .heading {
   display: flex;
@@ -134,7 +177,6 @@ DIV: LEFT COLUMN
   flex-shrink: 1;
   margin-right: 60px;
 }
-
 
 /*---------------------------------------------
 SECTION: CONTACT
@@ -169,10 +211,6 @@ SECTION: ABOUT
 .padding-bottom {
   padding-bottom: 13px;
 }
-
-/*.border-bottom {
-  border-bottom: solid black 1.6px;
-}*/
 
 /*---------------------------------------------
 DIV: RIGHT COLUMN
@@ -212,7 +250,6 @@ SECTION: PROJECTS
   text-align: center;
   color: rgb(255, 255, 255);
 }
-
 
 /*---------------------------------------------
 TABLET (landscape: 1024px / portrait: 768px)
@@ -307,18 +344,6 @@ TABLET (landscape: 1024px / portrait: 768px)
 
 /* Tablet portrait */
 @media (max-width: 768px) {
-  /*----CUSTOM CURSOR TURNED INTO IMAGE------ */
-  /* Styles for the cursor image */
-  .custom-cursor {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 0;
-    bottom: 0;
-
-    transform: translateX(-50%);
-  }
-
   /*---------CONTAINERS--------- */
   /* Styles for the content container (stacking columns) */
   .content {
@@ -348,6 +373,12 @@ TABLET (landscape: 1024px / portrait: 768px)
     padding: 14px 0px 17px 0;
   }
 
+  /* Styles to indicate that the projects heading can be clicked  at this size*/
+  .projects .title:hover {
+    color: rgb(128, 128, 128);
+    cursor: pointer;
+  }
+
   /* Styles for all text */
   .text {
     margin-right: 10px;
@@ -368,6 +399,7 @@ TABLET (landscape: 1024px / portrait: 768px)
   .contact .intro {
     padding: 17px 0 6px 0;
   }
+
 }
 
 /*---------------------------------------------
@@ -380,50 +412,9 @@ MOBILE (landscape: 667px / portrait: 375px)
     font-size: 21px;
     line-height: 25px;
   }
-}
 
-
-/*---------------------------------------------
-Code to simplify Javascript
-----------------------------------------------*/
-/* Mobile landscape */
-
-@media (max-width: 768px) {
-  .projects .title:hover {
-    color: rgb(128, 128, 128);
-    cursor: pointer;
-  }
-}
-
-.intro,
-.close {
-  display: none;
-}
-
-.accordeon.open {
-  border-bottom: solid black 1.6px;
-}
-
-.accordeon .title {
-  cursor: pointer;
-}
-.accordeon .title:hover {
-  color: rgb(128, 128, 128);
-}
-
-.accordeon.open .title.expand {
-  cursor: default;
-}
-.accordeon.open .title.expand:hover {
-  color: inherit;
-}
-.accordeon.open .close {
-  display: block;
-}
-
-
-@media (min-width: 768px) {
-  .accordeon.contact.open {
-    border-bottom-width: 0;
+  /*----HIDE VIDEO------ */
+  .player {
+    display: none;
   }
 }

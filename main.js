@@ -6,23 +6,23 @@ $('.video').on('click touchstart', function() {
 });
 
 
-$('.accordeon .title').on('click', function() {
+$('.accordion .title').on('click', function() {
 
   if ($(this).hasClass('expand')) {
     // open the nearby accordion
-    var accordeon = $(this).closest('.accordeon');
-    accordeon.find('.intro').slideDown();
-    accordeon.addClass('open');
+    var accordion = $(this).closest('.accordion');
+    accordion.find('.intro').slideDown();
+    accordion.addClass('open');
   } else {
     // dont open any accordions
-    var accordeon = null;
+    var accordion = null;
   }
 
-  // close all other accordeons
+  // close all other accordions
   // except the one we just opened (if any)
-  var otherAccordeons = $('.accordeon').not(accordeon);
-  otherAccordeons.find('.intro').slideUp();
-  otherAccordeons.removeClass('open');
+  var otheraccordions = $('.accordion').not(accordion);
+  otheraccordions.find('.intro').slideUp();
+  otheraccordions.removeClass('open');
 
 })
 
