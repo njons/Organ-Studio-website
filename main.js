@@ -30,11 +30,6 @@ $('.video').on('click touchstart', function() {
   moveToSecondScreen();
 });
 
-// CLICKING VIDEO:
-$('.video').on('touchstart', function() {
-  $('cursor-custom').hide();
-});
-
 // END OF VIDEO:
 $('.video').on('ended',function(){
   // fades out video over 1.5 seconds
