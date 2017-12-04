@@ -22,12 +22,6 @@ body {
   cursor: default;
 }
 
-/* EDGE/IE fix to make video cover entire window*/
-.videofix {
-  object-fit: cover;
-  font-family: 'object-fit: cover;';
-}
-
 /* Styles for container that holds all content on the page */
 .container {
   min-height: 100vh;
@@ -72,6 +66,7 @@ VIDEO PLAYER
   cursor: none;
   /* Style to fit the video to the full window */
   object-fit: cover;
+  font-family: 'object-fit: cover;';
   width: 100%;
   height: 100%;
   background-position: center center;

@@ -48,7 +48,16 @@ $(document).ready( function () {
     s.attr('preload', 'true');
     s.attr('autoplay', 'true');
   }
-})
+});
+
+
+/*---------------------------------------------
+OBJECT FIT POLYFILL:
+---------------------------------------------- */
+// ON LOAD:
+$(document).ready( function () {
+  objectFitVideos();
+});
 
 /*---------------------------------------------
 ACCORDION:
