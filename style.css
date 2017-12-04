@@ -19,8 +19,13 @@ body {
   font-weight: normal;
   letter-spacing: 0.05em;
   overflow: hidden;
-
   cursor: default;
+}
+
+/* EDGE/IE fix to make video cover entire window*/
+.video {
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
 }
 
 /* Styles for container that holds all content on the page */
