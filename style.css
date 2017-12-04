@@ -79,6 +79,8 @@ VIDEO PLAYER
   height: 21.5px;
   left: -100px;
   cursor: none;
+
+  pointer-events: none;
 }
 
 /*---------------------------------------------
