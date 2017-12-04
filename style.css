@@ -133,7 +133,7 @@ ACCORDION
 
 /* Styles for adding the bottom border when a heading is open*/
 .accordion.open {
-  border-bottom: solid black 1.6px;
+  border-bottom: solid black 2px;
 }
 
 /* Styles for hiding the bottom border when the contact section is open*/
@@ -159,7 +159,7 @@ NAV
 .title {
   width: 100%;
   padding: 19px 0px 14px 0;
-  border-bottom: solid black 1.6px;
+  border-bottom: solid black 2px;
 }
 
 /* Styles for close button */
@@ -256,6 +256,11 @@ TABLET (landscape: 1024px / portrait: 768px)
 ----------------------------------------------*/
 /* Tablet landscape */
 @media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   /*---------CONTAINERS--------- */
   /* Styles for the content container (stacking columns) */
   .content {
@@ -291,12 +296,6 @@ TABLET (landscape: 1024px / portrait: 768px)
   }
 
   /*---------TEXT--------- */
-  /* Styles for the font size for the entire page */
-  body {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
   /* Styles for text in the headings in the nav*/
   .title {
     padding: 12px 0px 13px 0;
@@ -344,6 +343,11 @@ TABLET (landscape: 1024px / portrait: 768px)
 
 /* Tablet portrait */
 @media (max-width: 768px) {
+  /* Styles for the font size for the entire page */
+  body {
+    font-size: 21px;
+    line-height: 25px;
+  }
   /*---------CONTAINERS--------- */
   /* Styles for the content container (stacking columns) */
   .content {
@@ -361,22 +365,16 @@ TABLET (landscape: 1024px / portrait: 768px)
     margin-right: 0;
   }
 
-  /*---------TEXT--------- */
-  /* Styles for the font size for the entire page */
-  body {
-    font-size: 21px;
-    line-height: 25px;
+  /* Styles for hiding the bottom border when the contact section is open*/
+  .accordion.contact.open {
+    border-bottom-width: 2px;
   }
+
+  /*---------TEXT--------- */
 
   /* Styles for all titels */
   .title {
     padding: 14px 0px 17px 0;
-  }
-
-  /* Styles to indicate that the projects heading can be clicked  at this size*/
-  .projects .title:hover {
-    color: rgb(128, 128, 128);
-    cursor: pointer;
   }
 
   /* Styles for all text */
@@ -398,6 +396,12 @@ TABLET (landscape: 1024px / portrait: 768px)
   /* Styles for the contact details container */
   .contact .intro {
     padding: 17px 0 6px 0;
+  }
+
+  /* Styles for the contact detail text */
+  .contact .intro .text {
+    font-size: 17px;
+    line-height: 21px;
   }
 
 }
