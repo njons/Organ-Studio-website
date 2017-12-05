@@ -1,26 +1,21 @@
 
 // FUNCTION FOR CLICKING VIDEO:
 function moveToSecondScreen() {
-
-  if (animate) {
-    var videoFadeSpeed = 1500;
+  if (!$('body').hasClass('second-screen')) {
     var audioFadeSpeed = 3500;
-  } else {
-    var videoFadeSpeed = 1;
-    var audioFadeSpeed = 1;
+    var videoFadeSpeed = 1500;
+
+    $('body').addClass('second-screen');
+
+    // fades out video over 1.5s
+    $('.player').fadeOut(videoFadeSpeed, function() {
+      $(this).find('video').remove();
+    });
+    // fades out sound over 3.5 seconds (lingering effect)
+    $('.sound').animate({volume: 0.0}, audioFadeSpeed);
+    // hides custom cursor image
+    $('.cursor-custom').hide();
   }
-
-  $('body').addClass('second-screen');
-
-  // fades out video over 1.5s
-  $('.player').fadeOut(videoFadeSpeed, function() {
-    $(this).find('video').remove();
-  });
-  // fades out sound over 3.5 seconds (lingering effect)
-  $('.sound').animate({volume: 0.0}, audioFadeSpeed);
-  // hides custom cursor image
-  $('.cursor-custom').hide();
-
 }
 
 /*---------------------------------------------
@@ -39,12 +34,15 @@ VIDEO:
 ----------------------------------------------*/
 // CLICKING VIDEO:
 $('.video').on('click touchstart', function() {
-  moveToSecondScreen(true);
+  moveToSecondScreen();
 });
 
 // END OF VIDEO:
-$('.video').on('ended',function(){
-  moveToSecondScreen(false);
+$('.video').on('play',function(){
+  var fadeOutTrigger = parseInt((this.duration-5)*1000);
+  setTimeout(function() {
+    moveToSecondScreen();
+  }, fadeOutTrigger);
 });
 
 /*---------------------------------------------
