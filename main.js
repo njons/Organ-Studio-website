@@ -1,14 +1,23 @@
 
 // FUNCTION FOR CLICKING VIDEO:
 function moveToSecondScreen() {
+
+  if (animate) {
+    var videoFadeSpeed = 1500;
+    var audioFadeSpeed = 3500;
+  } else {
+    var videoFadeSpeed = 1;
+    var audioFadeSpeed = 1;
+  }
+
   $('body').addClass('second-screen');
 
   // fades out video over 1.5s
-  $('.player').fadeOut(1500, function() {
+  $('.player').fadeOut(videoFadeSpeed, function() {
     $(this).find('video').remove();
   });
   // fades out sound over 3.5 seconds (lingering effect)
-  $('.sound').animate({volume: 0.0}, 3500);
+  $('.sound').animate({volume: 0.0}, audioFadeSpeed);
   // hides custom cursor image
   $('.cursor-custom').hide();
 
@@ -30,15 +39,12 @@ VIDEO:
 ----------------------------------------------*/
 // CLICKING VIDEO:
 $('.video').on('click touchstart', function() {
-  moveToSecondScreen();
+  moveToSecondScreen(true);
 });
 
 // END OF VIDEO:
 $('.video').on('ended',function(){
-  // fades out video over 1.5 seconds
-  $('.player').fadeOut(1500);
-  // fades out sound over 3.5 seconds (lingering effect)
-  $('.sound').animate({volume: 0.0}, 3500);
+  moveToSecondScreen(false);
 });
 
 /*---------------------------------------------
