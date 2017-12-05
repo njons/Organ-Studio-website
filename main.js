@@ -1,6 +1,8 @@
 
 // FUNCTION FOR CLICKING VIDEO:
 function moveToSecondScreen() {
+  $('body').addClass('second-screen');
+
   // fades out video over 1.5s
   $('.player').fadeOut(1500, function() {
     $(this).find('video').remove();
@@ -9,6 +11,7 @@ function moveToSecondScreen() {
   $('.sound').animate({volume: 0.0}, 3500);
   // hides custom cursor image
   $('.cursor-custom').hide();
+
 }
 
 /*---------------------------------------------
