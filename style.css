@@ -424,4 +424,8 @@ MOBILE (landscape: 667px / portrait: 375px)
     font-size: 21px;
     line-height: 25px;
   }
+
+  .player {
+    display: none;
+  }
 }
