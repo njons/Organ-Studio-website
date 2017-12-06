@@ -429,4 +429,9 @@ MOBILE (landscape: 667px / portrait: 375px)
   .player {
     display: none;
   }
+
+  /* Styles for flex layout*/
+  .content {
+    display: block;
+  }
 }
