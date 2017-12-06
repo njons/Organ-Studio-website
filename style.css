@@ -425,11 +425,6 @@ MOBILE (landscape: 667px / portrait: 375px)
     line-height: 25px;
   }
 
-  /*----HIDE VIDEO------ */
-  .player {
-    display: none;
-  }
-
   /* Styles for flex layout*/
   .content {
     display: block;
