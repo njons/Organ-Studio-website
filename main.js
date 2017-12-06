@@ -32,14 +32,16 @@ $('.video').mousemove(function (e) {
 /*---------------------------------------------
 VIDEO:
 ----------------------------------------------*/
+
 // CLICKING VIDEO:
 $('.video').on('click touchstart', function() {
   moveToSecondScreen();
 });
 
 // END OF VIDEO:
-$('.video').on('play',function(){
+$('.video').on('loadedmetadata',function(){
   var fadeOutTrigger = parseInt((this.duration-5)*1000);
+  console.log(fadeOutTrigger);
   setTimeout(function() {
     moveToSecondScreen();
   }, fadeOutTrigger);
