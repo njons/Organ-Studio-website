@@ -425,6 +425,10 @@ MOBILE (landscape: 667px / portrait: 375px)
     line-height: 25px;
   }
 
+  .content {
+    display: block;
+  }
+
   .player {
     display: none;
   }

@@ -1,4 +1,10 @@
 
+function screenSize () {
+  if( window.width < 667) {
+    moveToSecondScreen()
+  }
+}
+
 // FUNCTION FOR CLICKING VIDEO:
 function moveToSecondScreen() {
   if (!$('body').hasClass('second-screen')) {
