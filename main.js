@@ -1,6 +1,6 @@
 
 function screenSize () {
-  if( window.width < 667) {
+  if( window.width > 667) {
     moveToSecondScreen()
   }
 }
