@@ -56,7 +56,8 @@ $(document).ready( function () {
     var s = $('.sound')
     s.attr('preload', 'true');
     s.attr('autoplay', 'true');
-    moveToSecondScreen()
+  } else {
+    console.log('moveToSecondScreen');
   }
 });
 
