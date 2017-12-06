@@ -1,10 +1,4 @@
 
-function screenSize () {
-  if( window.width > 667) {
-    moveToSecondScreen()
-  }
-}
-
 // FUNCTION FOR CLICKING VIDEO:
 function moveToSecondScreen() {
   if (!$('body').hasClass('second-screen')) {
@@ -62,6 +56,7 @@ $(document).ready( function () {
     var s = $('.sound')
     s.attr('preload', 'true');
     s.attr('autoplay', 'true');
+    moveToSecondScreen()
   }
 });
 
