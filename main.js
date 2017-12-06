@@ -57,7 +57,7 @@ $(document).ready( function () {
     s.attr('preload', 'true');
     s.attr('autoplay', 'true');
   } else {
-    console.log('moveToSecondScreen');
+    moveToSecondScreen();
   }
 });
 
