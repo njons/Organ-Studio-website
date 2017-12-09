@@ -73,7 +73,7 @@ $(document).ready( function () {
 ACCORDION:
 ----------------------------------------------*/
 // WHEN CLICKING A HEADING TITLE
-$('.accordion .title').on('click', function() {
+$('.accordion .heading').on('click', function() {
 
   // decide which accordion to open
   if ($(this).hasClass('expand')) {
@@ -81,6 +81,22 @@ $('.accordion .title').on('click', function() {
     var accordionsToOpen = $(this).closest('.accordion');
     accordionsToOpen.find('.intro').slideDown();
     accordionsToOpen.addClass('open');
+
+    $(this).closest('.heading').removeClass('expand');
+    $(this).closest('.heading').addClass('slideUp');
+
+  // closing accordion by clicking the heading again
+
+  } else if ($(this).hasClass('slideUp')) {
+    var accordionSecondClick = $(this).closest('.accordion');
+
+    accordionSecondClick.find('.intro').slideUp();
+    accordionSecondClick.removeClass('slideUp');
+
+    $(this).closest('.heading').removeClass('slideUp');
+    $(this).closest('.heading').addClass('expand');
+    accordionSecondClick.removeClass('open');
+
   } else {
     // dont open any accordions
     var accordionsToOpen = null;
@@ -88,8 +104,7 @@ $('.accordion .title').on('click', function() {
 
   // close all other accordions
   // except the one we just opened (if any)
-  var accordionsToClose = $('.accordion').not(accordionsToOpen);
+  var accordionsToClose = $('.accordion').not(accordionsToOpen, accordionSecondClick);
   accordionsToClose.find('.intro').slideUp();
   accordionsToClose.removeClass('open');
-
 })

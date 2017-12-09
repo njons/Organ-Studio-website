@@ -119,20 +119,34 @@ ACCORDION
   color: rgb(128, 128, 128);
 }
 
-/* Styles for making the cursor a pointer when hovering the headings */
+/* Styles for making the cursor a pointer when hovering clickable elements (the headings) */
 .accordion:not(.projects) .title {
   cursor: pointer;
 }
 
-/* Styles for making the cursor a default cursor when hovering the headings once the content has been expanded */
-.accordion.open .title.expand {
+.accordion .heading * {
+  border-bottom: solid black 1.5px;
+}
+
+.accordion.open .heading * {
+  border-bottom: 0px;
+}
+
+/* Styles for making the cursor a default cursor when hovering the headings once the content has been expanded*/
+.accordion .title.control {
   cursor: default;
 }
 
-/* Styles for keeping the colour of the headings the same upon hovering the headings once the content has been expanded */
-.accordion.open .title.expand:hover {
+.accordion .title.control:hover {
   color: inherit;
 }
+
+/* Styles for keeping the colour of the headings the same upon hovering the headings once the content has been expanded
+.accordion.open .title.expand:hover {
+  color: inherit;
+}*/
+
+
 
 /* Styles for displaying the close / open buttons when the content has been expanded */
 .accordion.open .close {
@@ -142,10 +156,10 @@ ACCORDION
   display: none;
 }
 
-/* Styles for adding the bottom border when a heading is open*/
+/* Styles for adding the bottom border when a heading is open
 .accordion.open.intro {
   border-bottom: solid black 1.5px;
-}
+}*/
 
 /*---------------------------------------------
 NAV
@@ -154,6 +168,10 @@ NAV
 .intro,
 .close {
   display: none;
+}
+
+.intro {
+  border-bottom: solid black 1.5px;
 }
 
 .about .intro {
@@ -169,7 +187,6 @@ NAV
 .title {
   width: 100%;
   padding: 20px 0px 13px 0;
-  border-bottom: solid black 1.5px;
 }
 
 /* Styles for open & close buttons */
