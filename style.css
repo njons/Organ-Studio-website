@@ -158,6 +158,10 @@ NAV
   display: none;
 }
 
+.about .intro {
+  display: block;
+}
+
 /* Styles for the headings in the nav*/
 .heading {
   display: flex;
