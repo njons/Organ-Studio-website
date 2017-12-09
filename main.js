@@ -74,20 +74,21 @@ ACCORDION:
 // WHEN CLICKING A HEADING TITLE
 $('.accordion .title').on('click', function() {
 
+  // decide which accordion to open
   if ($(this).hasClass('expand')) {
     // open the nearby accordion
-    var accordion = $(this).closest('.accordion');
-    accordion.find('.intro').slideDown();
-    accordion.addClass('open');
+    var accordionsToOpen = $(this).closest('.accordion');
+    accordionsToOpen.find('.intro').slideDown();
+    accordionsToOpen.addClass('open');
   } else {
     // dont open any accordions
-    var accordion = null;
+    var accordionsToOpen = null;
   }
 
   // close all other accordions
   // except the one we just opened (if any)
-  var otheraccordions = $('.accordion').not(accordion);
-  otheraccordions.find('.intro').slideUp();
-  otheraccordions.removeClass('open');
+  var accordionsToClose = $('.accordion').not(accordionsToOpen);
+  accordionsToClose.find('.intro').slideUp();
+  accordionsToClose.removeClass('open');
 
 })
