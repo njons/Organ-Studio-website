@@ -12,15 +12,16 @@ body {
   background-color: rgb(255, 255, 255);
 
   /* Styles for type */
-  font-family: 'TheinhardtRegular', Fallback, sans-serif;
-  font-size: 23px;
-  line-height: 28px;
+  font-family: 'TheinhardtRegular', sans-serif;
+  font-size: 20.5px;
+  line-height: 24.5px;
   color: rgb(0, 0, 0);
   font-weight: normal;
   letter-spacing: 0.05em;
   overflow: hidden;
   cursor: default;
 }
+
 body.second-screen {
   overflow: auto;
 }
@@ -29,7 +30,6 @@ body.second-screen {
 .container {
   min-height: 100vh;
 }
-
 
 /* Style for images */
 img {
@@ -77,8 +77,8 @@ VIDEO PLAYER
 /* Styles for custom cursor: img with following mouse in jquery */
 .cursor-custom {
   position: absolute;
-  width: 100px;
-  height: 21.5px;
+  width: 74px;
+  height: 16px;
   left: -100px;
   cursor: none;
 
@@ -92,17 +92,17 @@ CONTENT
 /* Styles for flex layout*/
 .content {
   justify-content: center;
-  padding: 0 20px;
   display: none;
+  height: 100vh;
 }
+
 .second-screen .content {
   display: flex;
 }
 
-
 /* Styles for text on page*/
 .text {
-  margin-right: 81px;
+  margin-right: 75px;
   padding: 20px 0;
 }
 
@@ -129,24 +129,22 @@ ACCORDION
   cursor: default;
 }
 
-/* Styles for keeping the colour of the hadings the same upon hovering the headings once the content has been expanded */
+/* Styles for keeping the colour of the headings the same upon hovering the headings once the content has been expanded */
 .accordion.open .title.expand:hover {
   color: inherit;
 }
 
-/* Styles for displaying the close buttons when the content has been expanded */
+/* Styles for displaying the close / open buttons when the content has been expanded */
 .accordion.open .close {
   display: block;
 }
-
-/* Styles for adding the bottom border when a heading is open*/
-.accordion.open {
-  border-bottom: solid black 2px;
+.accordion.open .open {
+  display: none;
 }
 
-/* Styles for hiding the bottom border when the contact section is open*/
-.accordion.contact.open {
-  border-bottom-width: 0;
+/* Styles for adding the bottom border when a heading is open*/
+.accordion.open.intro {
+  border-bottom: solid black 1.5px;
 }
 
 /*---------------------------------------------
@@ -170,12 +168,17 @@ NAV
 /* Styles for text in the headings in the nav*/
 .title {
   width: 100%;
-  padding: 19px 0px 14px 0;
-  border-bottom: solid black 2px;
+  padding: 20px 0px 13px 0;
+  border-bottom: solid black 1.5px;
 }
 
-/* Styles for close button */
-.close {
+/* Styles for open & close buttons */
+.title.control {
+  text-align: right;
+  padding-right: 4px;
+}
+
+.coming-soon {
   text-align: right;
 }
 
@@ -187,7 +190,11 @@ DIV: LEFT COLUMN
   flex-basis: 629px;
   flex-grow: 1;
   flex-shrink: 1;
-  margin-right: 60px;
+  margin-right: 20px;
+}
+
+.content .col-left {
+  padding: 0 0 0 20px;
 }
 
 /*---------------------------------------------
@@ -232,6 +239,15 @@ DIV: RIGHT COLUMN
   flex-basis: 894px;
   flex-grow: 1;
   flex-shrink: 1;
+
+  background-color: rgb(0, 0, 0);
+  color: white;
+
+  height: 100vh;
+}
+
+.content .col-right {
+  padding: 0 20px 0 20px;
 }
 
 /*---------------------------------------------
@@ -240,27 +256,21 @@ SECTION: PROJECTS
 /* Styles for the projects section*/
 .projects .image {
   background-image: url(images/IMG_8375.JPG);
-  min-height: 616px;
   background-size: cover;
   background-position: center center;
-  position: relative;
-  z-index: -5;
+  height: auto;
+  width: auto;
 }
 
-/* Styles for the placehoder text */
-.projects .placeholder {
+/*---------------------------------------------
+FOOTER
+----------------------------------------------*/
+footer {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-
-  transform: translateX(-50%);
-
-  font-size: 60px;
-  line-height: 40px;
-  text-align: center;
-  color: rgb(255, 255, 255);
+  bottom: 20px;
+  left: 20px;
+  font-size: 17px;
+  line-height: 21px;
 }
 
 /*---------------------------------------------
@@ -273,18 +283,25 @@ TABLET (landscape: 1024px / portrait: 768px)
     line-height: 20px;
   }
 
-  /*---------CONTAINERS--------- */
-  /* Styles for the content container (stacking columns) */
-  .content {
-    padding: 0 18px;
+  div .content {
+    padding: 0px;
   }
 
+  /*---------CONTAINERS--------- */
   /* Styles for the left and right columns */
   .col-left,
   .col-right  {
     flex-basis: 476px;
     flex-grow: 1;
     flex-shrink: 1;
+  }
+
+  .content, .col-left {
+    padding: 0 0 0 18px;
+  }
+
+  .content .col-right {
+    padding: 0 18px 0 18px;
   }
 
   /* Style for space between the left and right columns */
@@ -299,12 +316,7 @@ TABLET (landscape: 1024px / portrait: 768px)
 
   /* Styles for the projects image */
   .projects .image {
-    background-image: url(images/IMG_8375.JPG);
     min-height: 385px;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    z-index: -5;
   }
 
   /*---------TEXT--------- */
@@ -365,7 +377,14 @@ TABLET (landscape: 1024px / portrait: 768px)
   .content {
     flex-wrap: wrap;
     max-width: 768px;
-    padding: 0 14px;
+  }
+
+  .content .col-left {
+    padding: 0 15px 0 15px;
+  }
+
+  .content .col-right {
+    padding: 0 15px 0 15px;
   }
 
   /* Styles for the left and right columns */
@@ -379,7 +398,7 @@ TABLET (landscape: 1024px / portrait: 768px)
 
   /* Styles for hiding the bottom border when the contact section is open*/
   .accordion.contact.open {
-    border-bottom-width: 2px;
+    border-bottom-width: 1.5px;
   }
 
   /*---------TEXT--------- */
@@ -416,7 +435,16 @@ TABLET (landscape: 1024px / portrait: 768px)
     line-height: 21px;
   }
 
+  .projects .title {
+    margin-left: 0px;
+  }
+
+  footer {
+  display: none;
+  }
 }
+
+
 
 /*---------------------------------------------
 MOBILE (landscape: 667px / portrait: 375px)

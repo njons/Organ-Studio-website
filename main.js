@@ -40,11 +40,12 @@ $('.video').on('click touchstart', function() {
 
 // END OF VIDEO:
 $('.video').on('loadedmetadata',function(){
-  var fadeOutTrigger = parseInt((this.duration-5)*1000);
-  console.log(fadeOutTrigger);
-  setTimeout(function() {
-    moveToSecondScreen();
-  }, fadeOutTrigger);
+  if ($(window).width() > 768) {
+    var fadeOutTrigger = parseInt((this.duration-5)*1000);
+    setTimeout(function() {
+      moveToSecondScreen();
+    }, fadeOutTrigger);
+  }
 });
 
 /*---------------------------------------------
@@ -56,7 +57,7 @@ $(document).ready( function () {
     var s = $('.sound')
     s.attr('preload', 'true');
     s.attr('autoplay', 'true');
-  } 
+  }
 });
 
 
