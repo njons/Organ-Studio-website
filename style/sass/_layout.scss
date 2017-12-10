@@ -57,17 +57,21 @@ a:hover {
 // Styles for flex layout
 .content {
   justify-content: center;
-  display: none;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
   min-height: 100vh;
   @media (max-width: 1024px) {
     div .content {
       padding: 0px;
     }
   }
-}
 
-.second-screen .content {
-  display: flex;
+  .second-screen & {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 3.5s ease-in;
+  }
 }
 
 // Styles for text on page

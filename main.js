@@ -5,11 +5,10 @@ function moveToSecondScreen() {
     var audioFadeSpeed = 3500;
     var videoFadeSpeed = 1500;
 
-    $('body').addClass('second-screen');
-
     // fades out video over 1.5s
     $('.player').fadeOut(videoFadeSpeed, function() {
       $(this).find('video').remove();
+      $('body').addClass('second-screen');
     });
     // fades out sound over 3.5 seconds (lingering effect)
     $('.sound').animate({volume: 0.0}, audioFadeSpeed);
