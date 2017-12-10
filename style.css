@@ -124,12 +124,8 @@ ACCORDION
   cursor: pointer;
 }
 
-.accordion .heading * {
+.accordion {
   border-bottom: solid black 1.5px;
-}
-
-.accordion.open .heading * {
-  border-bottom: 0;
 }
 
 .accordion .title.control {
@@ -154,7 +150,6 @@ NAV
 .intro,
 .close {
   display: none;
-  border-bottom: solid black 1.5px;
 }
 
 .intro {
@@ -393,11 +388,6 @@ TABLET (landscape: 1024px / portrait: 768px)
     flex-grow: 1;
     flex-shrink: 1;
     margin-right: 0;
-  }
-
-  /* Styles for hiding the bottom border when the contact section is open*/
-  .accordion.contact.open {
-    border-bottom-width: 1.5px;
   }
 
   /*---------TEXT--------- */
