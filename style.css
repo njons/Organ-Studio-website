@@ -102,8 +102,9 @@ CONTENT
 
 /* Styles for text on page*/
 .text {
-  margin-right: 75px;
-  padding: 20px 0;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Styles to make project heading look like the others, but is not intearctive yet */
@@ -119,7 +120,6 @@ ACCORDION
   color: rgb(128, 128, 128);
 }
 
-/* Styles for making the cursor a pointer when hovering clickable elements (the headings) */
 .accordion:not(.projects) .title {
   cursor: pointer;
 }
@@ -129,10 +129,9 @@ ACCORDION
 }
 
 .accordion.open .heading * {
-  border-bottom: 0px;
+  border-bottom: 0;
 }
 
-/* Styles for making the cursor a default cursor when hovering the headings once the content has been expanded*/
 .accordion .title.control {
   cursor: default;
 }
@@ -141,25 +140,12 @@ ACCORDION
   color: inherit;
 }
 
-/* Styles for keeping the colour of the headings the same upon hovering the headings once the content has been expanded
-.accordion.open .title.expand:hover {
-  color: inherit;
-}*/
-
-
-
-/* Styles for displaying the close / open buttons when the content has been expanded */
 .accordion.open .close {
   display: block;
 }
 .accordion.open .open {
   display: none;
 }
-
-/* Styles for adding the bottom border when a heading is open
-.accordion.open.intro {
-  border-bottom: solid black 1.5px;
-}*/
 
 /*---------------------------------------------
 NAV
@@ -168,10 +154,12 @@ NAV
 .intro,
 .close {
   display: none;
+  border-bottom: solid black 1.5px;
 }
 
 .intro {
-  border-bottom: solid black 1.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .about .intro {
@@ -186,17 +174,32 @@ NAV
 /* Styles for text in the headings in the nav*/
 .title {
   width: 100%;
-  padding: 20px 0px 13px 0;
+  padding: 15px 0px 15px 0;
 }
 
 /* Styles for open & close buttons */
-.title.control {
-  text-align: right;
-  padding-right: 4px;
+.control {
+  padding: 15px 10px 15px 0;
 }
 
 .coming-soon {
   text-align: right;
+  width: 170px;
+  padding: 15px 0px 15px 0;
+}
+
+.copyright {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  font-size: 17px;
+  line-height: 21px;
+}
+
+.footnote {
+  flex: 1 1 auto;
+  margin-top: auto;
+  padding-bottom: 20px;
 }
 
 /*---------------------------------------------
@@ -208,6 +211,9 @@ DIV: LEFT COLUMN
   flex-grow: 1;
   flex-shrink: 1;
   margin-right: 20px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .content .col-left {
@@ -221,31 +227,18 @@ SECTION: CONTACT
   background-color: rgb(255, 255, 255);
 }
 
-/* Styles for the contact details container */
-.contact .intro {
-  padding-top: 31px;
-}
-
 /* Styles for contact detail text */
 .contact .text {
   font-size: 17px;
   line-height: 21px;
   text-transform: uppercase;
-  padding: 0 0 30px 0;
 }
 
 /* Styles for the bottom lowercase information at bottom */
-.contact .footnote {
+.contact .acknowlegement {
   text-transform: none;
-  padding-top: 21px;
-}
-
-/*---------------------------------------------
-SECTION: ABOUT
-----------------------------------------------*/
-/* Styles for the bottom of the about section */
-.padding-bottom {
-  padding-bottom: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /*---------------------------------------------
@@ -277,17 +270,6 @@ SECTION: PROJECTS
   background-position: center center;
   height: auto;
   width: auto;
-}
-
-/*---------------------------------------------
-FOOTER
-----------------------------------------------*/
-footer {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 17px;
-  line-height: 21px;
 }
 
 /*---------------------------------------------
@@ -372,7 +354,7 @@ TABLET (landscape: 1024px / portrait: 768px)
 
   /* Styles for the contact detail text */
   .contact .intro .footnote {
-    padding-top: 28.5px;
+    padding-top: 30px;
   }
 
   /* Styles for the placeholder project text */
@@ -460,7 +442,6 @@ TABLET (landscape: 1024px / portrait: 768px)
   display: none;
   }
 }
-
 
 
 /*---------------------------------------------

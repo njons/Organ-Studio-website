@@ -73,8 +73,26 @@ $(document).ready( function () {
 ACCORDION:
 ----------------------------------------------*/
 // WHEN CLICKING A HEADING TITLE
-$('.accordion .heading').on('click', function() {
+$('.heading').on('click', function() {
+  if ($(this).hasClass('open')) {
+    $('.about .intro').slideDown();
+    $('.contact .intro').slideUp();
+    $(this).removeClass('open');
+ } else {
+    $('.about .intro').slideUp();
+    $('.contact .intro').slideDown();
+    $(this).addClass('open');
+  }
+})
 
+  /*if ($('.accordion').hasClass('open')) {
+    $('.accordion').find('.intro').slideDown();
+  } else {
+    console.log('it does not have class open');
+    $('.accordion').find('.intro').slideUp();
+  }
+})
+  /*
   // decide which accordion to open
   if ($(this).hasClass('expand')) {
     // open the nearby accordion
@@ -106,5 +124,4 @@ $('.accordion .heading').on('click', function() {
   // except the one we just opened (if any)
   var accordionsToClose = $('.accordion').not(accordionsToOpen, accordionSecondClick);
   accordionsToClose.find('.intro').slideUp();
-  accordionsToClose.removeClass('open');
-})
+  accordionsToClose.removeClass('open');*/
