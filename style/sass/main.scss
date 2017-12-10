@@ -1,3 +1,19 @@
+// -------------------------------------------
+// ORGAN STUDIO WEBSITE
+// -------------------------------------------
+
+// basics
 @import 'reset';
 @import 'font';
-@import 'style';
+
+// overall layout & typography
+@import 'layout';
+
+// components
+@import 'video';
+@import 'accordion';
+@import 'projects';
+
+// responsive site
+@import 'tablet';
+@import 'mobile';
