@@ -74,16 +74,31 @@ ACCORDION:
 ----------------------------------------------*/
 // WHEN CLICKING A HEADING TITLE
 $('.heading').on('click', function() {
-  if ($(this).hasClass('open')) {
-    $('.about .intro').slideDown();
-    $('.contact .intro').slideUp();
-    $(this).removeClass('open');
+
+  // find the accordion div that was clicked
+  var accordion = $(this).closest('.accordion');
+
+  // check if the clicked accordion section was open or closed
+  if (accordion.hasClass('open')) {
+    // the accordion section is open, so we will close it
+
+    // collapse the intro section:
+    accordion.find('.intro').slideUp();
+
+    // and register it status as closed
+    // for our future reference,
+    // and so the css is right
+    accordion.removeClass('open');
  } else {
-    $('.about .intro').slideUp();
-    $('.contact .intro').slideDown();
-    $(this).addClass('open');
+   // the accordion section is closed, so we will open it
+
+   // expand the intro section
+   accordion.find('.intro').slideDown();
+
+   // and register it status as open
+   accordion.addClass('open');
   }
-})
+});
 
   /*if ($('.accordion').hasClass('open')) {
     $('.accordion').find('.intro').slideDown();
