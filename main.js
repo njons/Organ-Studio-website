@@ -75,7 +75,7 @@ ACCORDION:
 // WHEN CLICKING A HEADING TITLE
 $('.heading').on('click', function() {
 
-  // find the accordion div that was clicked
+  // find the accordion section was clicked
   var accordion = $(this).closest('.accordion');
 
   // check if the clicked accordion section was open or closed
@@ -99,44 +99,3 @@ $('.heading').on('click', function() {
    accordion.addClass('open');
   }
 });
-
-  /*if ($('.accordion').hasClass('open')) {
-    $('.accordion').find('.intro').slideDown();
-  } else {
-    console.log('it does not have class open');
-    $('.accordion').find('.intro').slideUp();
-  }
-})
-  /*
-  // decide which accordion to open
-  if ($(this).hasClass('expand')) {
-    // open the nearby accordion
-    var accordionsToOpen = $(this).closest('.accordion');
-    accordionsToOpen.find('.intro').slideDown();
-    accordionsToOpen.addClass('open');
-
-    $(this).closest('.heading').removeClass('expand');
-    $(this).closest('.heading').addClass('slideUp');
-
-  // closing accordion by clicking the heading again
-
-  } else if ($(this).hasClass('slideUp')) {
-    var accordionSecondClick = $(this).closest('.accordion');
-
-    accordionSecondClick.find('.intro').slideUp();
-    accordionSecondClick.removeClass('slideUp');
-
-    $(this).closest('.heading').removeClass('slideUp');
-    $(this).closest('.heading').addClass('expand');
-    accordionSecondClick.removeClass('open');
-
-  } else {
-    // dont open any accordions
-    var accordionsToOpen = null;
-  }
-
-  // close all other accordions
-  // except the one we just opened (if any)
-  var accordionsToClose = $('.accordion').not(accordionsToOpen, accordionSecondClick);
-  accordionsToClose.find('.intro').slideUp();
-  accordionsToClose.removeClass('open');*/
