@@ -17,6 +17,10 @@ body {
   overflow: hidden;
   cursor: default;
 
+  @media (max-width: 667px) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }
 
 body.second-screen {
