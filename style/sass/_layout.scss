@@ -66,6 +66,11 @@ a:hover {
       padding: 0px;
     }
   }
+  @media (max-width: 667px) {
+    .content {
+      display: block;
+    }
+  }
 
   .second-screen & {
     visibility: visible;

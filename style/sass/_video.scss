@@ -1,7 +1,7 @@
-
 // -------------------------------------------
 // VIDEO PLAYER
 // -------------------------------------------
+
 // Styles for video player container that holds the video
 .player {
   position: absolute;
@@ -9,6 +9,9 @@
   left: 0;
   right: 0;
   bottom: 0;
+  @media (max-width: 667px) {
+    display: none;
+  }
 }
 
 // Styles for video player
