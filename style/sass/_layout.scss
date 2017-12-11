@@ -5,7 +5,6 @@
 body {
   // background colour
   background-color: rgb(255, 255, 255);
-
   font-family: 'TheinhardtRegular', sans-serif;
   font-size: 20.5px;
   line-height: 24.5px;
@@ -23,10 +22,14 @@ body {
     font-size: 16px;
     line-height: 20px;
   }
-  @media (max-width: 667px) {
+  @media (max-width: 768px) {
     font-size: 21px;
     line-height: 25px;
   }
+  //@media (max-width: 667px) {
+  //  font-size: 21px;
+  //  line-height: 25px;
+  //}
 }
 
 // all links
@@ -39,7 +42,6 @@ a {
   }
 }
 
-
 // -------------------------------------------
 // IMAGE
 // -------------------------------------------
@@ -47,8 +49,6 @@ a {
 img {
   width: 100%;
 }
-
-
 
 // -------------------------------------------
 // CONTAINERS
@@ -67,14 +67,16 @@ img {
   opacity: 0;
   min-height: 100vh;
   @media (max-width: 1024px) {
-    div .content {
-      padding: 0px;
-    }
+    padding: 0px;
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    max-width: 768px;
   }
   @media (max-width: 667px) {
-    .content {
-      display: block;
-    }
+    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 
   .second-screen & {
@@ -90,25 +92,40 @@ img {
   flex-grow: 1;
   flex-shrink: 1;
   margin-right: 20px;
-
   display: flex;
   flex-direction: column;
-
   padding: 0 0 0 20px;
+  @media (max-width: 1024px) {
+    padding-left: 18px;
+    flex-basis: 476px;
+  }
+  @media (max-width: 768px) {
+    flex-basis: 602px;
+    margin-right: 0;
+    padding: 0 15px;
+  }
 }
+
 
 // container for the right hand content (right column)
 .col-right {
   flex-basis: 894px;
   flex-grow: 1;
   flex-shrink: 1;
-
   background-color: rgb(0, 0, 0);
   color: white;
-
   min-height: 100vh;
-
   padding: 0 20px;
+  @media (max-width: 1024px) {
+    padding: 0 18px;
+    margin-right: 0px;
+    flex-basis: 476px;
+  }
+  @media (max-width: 768px) {
+    flex-basis: 602px;
+    margin-right: 0;
+    padding: 0 15px;
+  }
 }
 
 // container holding the title and the +/- in the menu
@@ -134,66 +151,7 @@ img {
   height: 100%;
   font-size: 17px;
   line-height: 21px;
-}
-
-// -------------------------------------------
-// CONTENT
-// -------------------------------------------
-
-// all text
-.text {
-  margin-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  &:hover {
-    color: black;
+  @media (max-width: 1024px) {
+    padding-top: 30px;
   }
-}
-
-// menu items
-.title {
-  width: 100%;
-  padding: 15px 0;
-}
-
-// coming soon placeholder (for the +/-)
-.coming-soon {
-  text-align: right;
-  width: 170px;
-  padding: 15px 0px;
-}
-
-// copyright text at the bottom of page
-.footnote {
-  flex: 1 1 auto;
-  margin-top: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-// -------------------------------------------
-// SECTION: ABOUT
-// -------------------------------------------
-
-// show content only in about on load
-.about .panel {
-  display: block;
-}
-
-// -------------------------------------------
-// SECTION: CONTACT
-// -------------------------------------------
-
-// contact details
-.contact .text {
-  font-size: 17px;
-  line-height: 21px;
-  text-transform: uppercase;
-}
-
-// lowercase information at bottom of contact
-.contact .acknowlegement {
-  text-transform: none;
-  padding-top: 15px;
-  padding-bottom: 10px;
 }

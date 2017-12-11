@@ -1,0 +1,131 @@
+// -------------------------------------------
+// CONTENT
+// -------------------------------------------
+
+@media (max-width: 1024px) {
+  .projects .image {
+    min-height: 385px;
+  }
+}
+
+
+// menu item headings
+.title {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 0;
+  @media (max-width: 1024px) {
+    padding-top: 12px;
+    padding-bottom: 13px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 14px;
+    padding-bottom: 17px;
+  }
+}
+
+// all text
+.text {
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &:hover {
+    color: black;
+  }
+  @media (max-width: 1024px) {
+    margin-right: 84px;
+    padding: 0;
+  }
+  @media (max-width: 768px) {
+    margin-right: 10px;
+  }
+}
+
+// copyright text at the bottom of page
+.footnote {
+  flex: 1 1 auto;
+  margin-top: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  @media (max-width: 768px) {// in this size the copyright needs to be inside the line
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+
+// -------------------------------------------
+// SECTION: ABOUT
+// -------------------------------------------
+
+// container holding content and content inside
+.about .panel {
+  display: block;
+  @media (max-width: 1024px) {
+    padding: 0.5px 0 24px 0;
+  }
+  @media (max-width: 768px) {
+    padding-top: 7.5px;
+    padding-bottom: 24px;
+  }
+  & .text {
+  @media (max-width: 1024px) {
+    padding-top: 14.5px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 18.5px;
+  }
+}
+
+// -------------------------------------------
+// SECTION: CONTACT
+// -------------------------------------------
+
+// container holding content
+.contact .panel {
+  padding-top: 16px;
+  @media (max-width: 768px) {
+    padding-top: 17px;
+    padding-bottom: 6px;
+  }
+  & .text {
+  font-size: 17px;
+  line-height: 21px;
+  text-transform: uppercase;
+  }
+  @media (max-width: 1024px) {
+    padding: 12.5px 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  @media (max-width: 768px) {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+// coming soon placeholder (for the +/-)
+.coming-soon {
+  text-align: right;
+  width: 170px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
+}
+
+// lowercase information at bottom of contact
+.contact .acknowlegement {
+  text-transform: none;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  @media (max-width: 1024px) {
+    padding: 0px;
+  }
+}
+}

@@ -10,7 +10,7 @@
   right: 0;
   bottom: 0;
   @media (max-width: 667px) {
-    display: none;
+   display: none;
   }
 }
 
@@ -35,6 +35,5 @@
   height: 16px;
   left: -100px;
   cursor: none;
-
   pointer-events: none;
 }

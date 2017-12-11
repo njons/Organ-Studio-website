@@ -8,11 +8,9 @@
 
 // overall layout & typography
 @import 'layout';
+@import'content';
 
 // components
 @import 'video';
 @import 'accordion';
 @import 'projects';
-
-// responsive site
-@import 'tablet';
