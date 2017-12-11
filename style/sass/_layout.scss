@@ -1,60 +1,65 @@
-
-// -------------------------------------------
+//-------------------------------------------
 // ENTIRE PAGE
 // -------------------------------------------
-// Styles for container of both video and content
+
 body {
-  // Styles for background
+  // background colour
   background-color: rgb(255, 255, 255);
 
-  // Styles for type
   font-family: 'TheinhardtRegular', sans-serif;
   font-size: 20.5px;
   line-height: 24.5px;
   color: rgb(0, 0, 0);
   font-weight: normal;
   letter-spacing: 0.05em;
+  // disable scrolling
   overflow: hidden;
   cursor: default;
-
+    &.second-screen {
+      // enable scrolling when class second-screen is added
+      overflow: auto;
+    }
+  @media (max-width: 1024px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
   @media (max-width: 667px) {
     font-size: 21px;
     line-height: 25px;
   }
 }
 
-body.second-screen {
-  overflow: auto;
+// all links
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  &:hover {
+    color: rgb(128, 128, 128);
+    cursor: pointer;
+  }
 }
 
-// Styles for container that holds all content on the page
-.container {
-  min-height: 100vh;
-}
 
-// Style for images
+// -------------------------------------------
+// IMAGE
+// -------------------------------------------
+
 img {
   width: 100%;
 }
 
-// Styles for links
-a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
-
-// Styles for links on hover
-a:hover {
-  color: rgb(128, 128, 128);
-  cursor: pointer;
-}
 
 
 // -------------------------------------------
-// CONTENT
+// CONTAINERS
 // -------------------------------------------
 
-// Styles for flex layout
+// container that holds all content on the page
+.container {
+  min-height: 100vh;
+}
+
+// container for columns right and left
 .content {
   justify-content: center;
   display: flex;
@@ -75,33 +80,11 @@ a:hover {
   .second-screen & {
     visibility: visible;
     opacity: 1;
-    transition: opacity 3.5s ease-in;
+    transition: opacity 3.5s;
   }
 }
 
-// Styles for text on page
-.text {
-  margin-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-// Styles to make project heading look like the others, but is not intearctive yet
-.text:hover {
-  color: black;
-}
-
-// Styles for text in the headings in the nav
-.title {
-  width: 100%;
-  padding: 15px 0px 15px 0;
-}
-
-
-// -------------------------------------------
-// DIV: LEFT COLUMN
-// -------------------------------------------
-// Styles for the width of the left column
+// container for the left hand content (left column)
 .col-left {
   flex-basis: 629px;
   flex-grow: 1;
@@ -110,16 +93,11 @@ a:hover {
 
   display: flex;
   flex-direction: column;
-}
 
-.content .col-left {
   padding: 0 0 0 20px;
 }
 
-// -------------------------------------------
-// DIV: RIGHT COLUMN
-// -------------------------------------------
-// Styles for the width of the right column
+// container for the right hand content (right column)
 .col-right {
   flex-basis: 894px;
   flex-grow: 1;
@@ -129,31 +107,93 @@ a:hover {
   color: white;
 
   min-height: 100vh;
+
+  padding: 0 20px;
 }
 
-.content .col-right {
-  padding: 0 20px 0 20px;
+// container holding the title and the +/- in the menu
+.heading {
+  display: flex;
 }
 
+// container holding the content in the accordion
+.panel {
+  padding-bottom: 10px;
+}
 
+// hiding the container holding the content and the minus on load
+.panel,
+.close {
+  display: none;
+}
+
+// container for the copyright at the bottom of page
+.copyright {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  font-size: 17px;
+  line-height: 21px;
+}
+
+// -------------------------------------------
+// CONTENT
+// -------------------------------------------
+
+// all text
+.text {
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &:hover {
+    color: black;
+  }
+}
+
+// menu items
+.title {
+  width: 100%;
+  padding: 15px 0;
+}
+
+// coming soon placeholder (for the +/-)
+.coming-soon {
+  text-align: right;
+  width: 170px;
+  padding: 15px 0px;
+}
+
+// copyright text at the bottom of page
+.footnote {
+  flex: 1 1 auto;
+  margin-top: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+// -------------------------------------------
+// SECTION: ABOUT
+// -------------------------------------------
+
+// show content only in about on load
+.about .panel {
+  display: block;
+}
 
 // -------------------------------------------
 // SECTION: CONTACT
 // -------------------------------------------
-.contact {
-  background-color: rgb(255, 255, 255);
-}
 
-// Styles for contact detail text
+// contact details
 .contact .text {
   font-size: 17px;
   line-height: 21px;
   text-transform: uppercase;
 }
 
-// Styles for the bottom lowercase information at bottom
+// lowercase information at bottom of contact
 .contact .acknowlegement {
   text-transform: none;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
 }

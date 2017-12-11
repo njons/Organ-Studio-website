@@ -81,8 +81,8 @@ $('.heading').on('click', function() {
   if (accordion.hasClass('open')) {
     // the accordion section is open, so we will close it
 
-    // collapse the intro section:
-    accordion.find('.intro').slideUp();
+    // collapse the panel section:
+    accordion.find('.panel').slideUp();
 
     // and register it status as closed
     // for our future reference,
@@ -91,8 +91,8 @@ $('.heading').on('click', function() {
  } else {
    // the accordion section is closed, so we will open it
 
-   // expand the intro section
-   accordion.find('.intro').slideDown();
+   // expand the panel section
+   accordion.find('.panel').slideDown();
 
    // and register it status as open
    accordion.addClass('open');

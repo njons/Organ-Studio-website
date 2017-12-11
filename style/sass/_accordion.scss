@@ -1,8 +1,6 @@
-
-// -------------------------------------------
 // ACCORDION
 // -------------------------------------------
-// Styles for hovering the headings
+
 .accordion:not(.projects) .title:hover {
   color: rgb(128, 128, 128);
 }
@@ -26,55 +24,12 @@
 .accordion.open .close {
   display: block;
 }
+
 .accordion.open .open {
   display: none;
 }
 
-// -------------------------------------------
-// NAV
-// -------------------------------------------
-// Styles for hiding the content and the close buttons in the nav before click
-.intro,
-.close {
-  display: none;
-}
-
-.intro {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.about .intro {
-  display: block;
-}
-
-// Styles for the headings in the nav
-.heading {
-  display: flex;
-}
-
-
 // Styles for open & close buttons
 .control {
   padding: 15px 10px 15px 0;
-}
-
-.coming-soon {
-  text-align: right;
-  width: 170px;
-  padding: 15px 0px 15px 0;
-}
-
-.copyright {
-  display: flex;
-  justify-content: flex-end;
-  height: 100%;
-  font-size: 17px;
-  line-height: 21px;
-}
-
-.footnote {
-  flex: 1 1 auto;
-  margin-top: auto;
-  padding-bottom: 20px;
 }
