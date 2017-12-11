@@ -10,8 +10,9 @@
   cursor: pointer;
 }
 
-.accordion {
-  border-bottom: solid black 1.5px;
+.col-left .accordion {
+  border-bottom: solid #333 1px;
+
 }
 
 .accordion .title.control {

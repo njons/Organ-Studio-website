@@ -6,8 +6,8 @@ body {
   // background colour
   background-color: rgb(255, 255, 255);
   font-family: 'TheinhardtRegular', sans-serif;
-  font-size: 20.5px;
-  line-height: 24.5px;
+  font-size: 21px;
+  line-height: 25px;
   color: rgb(0, 0, 0);
   font-weight: normal;
   letter-spacing: 0.05em;
@@ -25,6 +25,7 @@ body {
   @media (max-width: 768px) {
     font-size: 21px;
     line-height: 25px;
+    overflow: auto;
   }
   //@media (max-width: 667px) {
   //  font-size: 21px;
@@ -131,6 +132,11 @@ img {
 // container holding the title and the +/- in the menu
 .heading {
   display: flex;
+  position: sticky;
+  top: 0;
+  .col-left & {
+    background-color: #fff;
+  }
 }
 
 // container holding the content in the accordion
@@ -139,7 +145,7 @@ img {
   display: none;
 }
 
-// the minus and plus 
+// the minus and plus
 .close {
   display: none;
 }
