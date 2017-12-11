@@ -136,10 +136,10 @@ img {
 // container holding the content in the accordion
 .panel {
   padding-bottom: 10px;
+  display: none;
 }
 
-// hiding the container holding the content and the minus on load
-.panel,
+// the minus and plus 
 .close {
   display: none;
 }
