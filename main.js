@@ -92,13 +92,19 @@ $('.heading').on('click', function() {
     // for our future reference,
     // and so the css is right
     accordion.removeClass('open');
- } else {
-   // the accordion section is closed, so we will open it
+  } else {
+    // the accordion section is closed, so we will open it
 
-   // expand the panel section
-   accordion.find('.panel').slideDown();
+    // expand the panel section
+    accordion.find('.panel').slideDown();
 
-   // and register it status as open
-   accordion.addClass('open');
+    // and register it status as open
+    accordion.addClass('open');
+
+    // close other accordion sections
+    // except (.not) the one we just opened
+    var otherAccordions = $('.accordion').not(accordion);
+    otherAccordions.find('.panel').slideUp();
+    otherAccordions.removeClass('open');
   }
 });
