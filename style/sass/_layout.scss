@@ -132,8 +132,10 @@ img {
 // container holding the title and the +/- in the menu
 .heading {
   display: flex;
-  position: sticky;
-  top: 0;
+    @media (max-width: 768px) {
+      position: sticky;
+      top: 0;
+    }
   .col-left & {
     background-color: #fff;
   }
