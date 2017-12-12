@@ -2,9 +2,9 @@
 // CONTENT
 // -------------------------------------------
 
-
-@media (max-width: 1024px) {
-  .projects .image {
+.projects .image {
+  height: 635px;
+  @media (max-width: 1024px) {
     min-height: 385px;
   }
 }
@@ -99,15 +99,15 @@
     font-size: 17px;
     line-height: 21px;
     text-transform: uppercase;
-  }
-  @media (max-width: 1024px) {
-    padding: 13px 0;
-    font-size: 14px;
-    line-height: 17px;
-  }
-  @media (max-width: 768px) {
-    font-size: 17px;
-    line-height: 21px;
+    @media (max-width: 1024px) {
+      padding: 13px 0;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    @media (max-width: 768px) {
+      font-size: 17px;
+      line-height: 21px;
+    }
   }
 }
 
@@ -126,7 +126,7 @@
 }
 
 // lowercase information at bottom of contact
-.contact .acknowlegement {
+.contact .text.acknowlegement {
   text-transform: none;
   padding-top: 15px;
   padding-bottom: 10px;
