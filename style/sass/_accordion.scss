@@ -31,14 +31,14 @@
   }
 
   // logic to show-hide the plus-minus
-  .close {
+  .minus {
     display: none;
   }
   &.open {
-    .close {
+    .minus {
       display: block;
     }
-    .open {
+    .plus {
       display: none;
     }
   }
