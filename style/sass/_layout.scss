@@ -11,6 +11,8 @@ body {
   color: rgb(0, 0, 0);
   font-weight: normal;
   letter-spacing: 0.05em;
+  -webkit-font-smoothing: antialiased;
+  
   // disable scrolling
   overflow: hidden;
   cursor: default;
