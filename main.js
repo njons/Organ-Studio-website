@@ -42,7 +42,7 @@ $('.fullscreen').on('click touchstart', function() {
 });
 
 // END OF VIDEO:
-$('.fullscreen').on('loadedmetadata',function(){
+$('.video').on('loadedmetadata',function(){
   if ($(window).width() > 768) {
     var fadeOutTrigger = parseInt((this.duration-5)*1000);
     setTimeout(function() {
@@ -57,9 +57,8 @@ SOUND:
 // ON LOAD:
 $(document).ready( function () {
   if ($(window).width() > 768) {
-    var s = $('.sound')
-    s.attr('preload', 'true');
-    s.attr('autoplay', 'true');
+    var s = $('.sound');
+    s[0].play();
   }
 });
 
@@ -70,7 +69,6 @@ OBJECT FIT POLYFILL:
 // ON LOAD:
 $(document).ready( function () {
   objectFitVideos();
-  moveToSecondScreen();
 });
 
 /*---------------------------------------------
