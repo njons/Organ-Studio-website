@@ -108,3 +108,9 @@ $('.heading').on('click', function() {
     otherAccordions.removeClass('open');
   }
 });
+
+
+// IF YOU OPEN CONTACT, AND ABOUT WAS OPEN, SCROLL TO TOP
+$(document).on('click', '.contact.open .heading', function() {
+  $('html, body').animate({scrollTop: 0}, 360);
+});
