@@ -5,6 +5,10 @@ function moveToSecondScreen() {
     var audioFadeSpeed = 3500;
     var videoFadeSpeed = 1500;
 
+    var aboutAccordion = $('.accordion.about');
+    aboutAccordion.find('.panel').show();
+    aboutAccordion.addClass('open');
+
     // fades out video over 1.5s
     $('.player').fadeOut(videoFadeSpeed, function() {
       $(this).find('video').remove();
@@ -88,13 +92,25 @@ $('.heading').on('click', function() {
     // for our future reference,
     // and so the css is right
     accordion.removeClass('open');
- } else {
-   // the accordion section is closed, so we will open it
+  } else {
+    // the accordion section is closed, so we will open it
 
-   // expand the panel section
-   accordion.find('.panel').slideDown();
+    // expand the panel section
+    accordion.find('.panel').slideDown();
 
-   // and register it status as open
-   accordion.addClass('open');
+    // and register it status as open
+    accordion.addClass('open');
+
+    // close other accordion sections
+    // except (.not) the one we just opened
+    var otherAccordions = $('.accordion').not(accordion);
+    otherAccordions.find('.panel').slideUp();
+    otherAccordions.removeClass('open');
   }
+});
+
+
+// IF YOU OPEN CONTACT, AND ABOUT WAS OPEN, SCROLL TO TOP
+$(document).on('click', '.contact.open .heading', function() {
+  $('html, body').animate({scrollTop: 0}, 360);
 });
