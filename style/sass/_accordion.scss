@@ -28,6 +28,12 @@
         padding-right: 10px;
       }
     }
+
+    // container holding the content in the accordion
+    .panel {
+      display: none;
+    }
+
   }
 
   // logic to show-hide the plus-minus

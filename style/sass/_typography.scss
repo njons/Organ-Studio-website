@@ -1,0 +1,24 @@
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'TheinhardtRegular', sans-serif;
+
+  // type size for desktop & mobile
+  font-size: 21px;
+  line-height: 25px;
+  .small-type {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  // type size for tablet
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 16px;
+    line-height: 20px;
+    .small-type {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
