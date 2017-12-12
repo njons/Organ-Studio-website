@@ -2,6 +2,14 @@
 // CONTENT
 // -------------------------------------------
 
+.projects .image {
+  height: 635px;
+  @media (max-width: 1024px) {
+    min-height: 385px;
+  }
+}
+
+
 // menu item headings
 .title {
   width: 100%;
@@ -15,11 +23,6 @@
     padding-top: 14px;
     padding-bottom: 17px;
   }
-}
-
-// Styles for open & close buttons
-.control {
-  padding: 15px 10px 15px 0;
 }
 
 // all text
@@ -54,6 +57,7 @@
     line-height: 17px;
   }
 }
+
 
 // -------------------------------------------
 // SECTION: ABOUT
@@ -95,15 +99,15 @@
     font-size: 17px;
     line-height: 21px;
     text-transform: uppercase;
-  }
-  @media (max-width: 1024px) {
-    padding: 13px 0;
-    font-size: 14px;
-    line-height: 17px;
-  }
-  @media (max-width: 768px) {
-    font-size: 17px;
-    line-height: 21px;
+    @media (max-width: 1024px) {
+      padding: 13px 0;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    @media (max-width: 768px) {
+      font-size: 17px;
+      line-height: 21px;
+    }
   }
 }
 
@@ -127,6 +131,5 @@
   padding-top: 15px;
   padding-bottom: 10px;
   @media (max-width: 1024px) {
-    padding: 0px;
   }
 }
