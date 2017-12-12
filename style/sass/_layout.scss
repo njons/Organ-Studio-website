@@ -160,4 +160,19 @@ img {
   @media (max-width: 1024px) {
     padding-top: 30px;
   }
+  @media (max-width: 768px) {
+    display:none;
+  }
+}
+
+.copyright-contacts {
+  display: none;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    display: block;
+    font-size: 17px;
+    line-height: 21px;
+  }
 }

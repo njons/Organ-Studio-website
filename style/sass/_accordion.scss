@@ -12,7 +12,11 @@
 
 .col-left .accordion {
   border-bottom: solid #333 1px;
-
+  &.contact {
+    @media (max-width: 768px) {
+      border-bottom: 0;
+    }
+  }
 }
 
 .accordion .title.control {
@@ -29,9 +33,4 @@
 
 .accordion.open .open {
   display: none;
-}
-
-// Styles for open & close buttons
-.control {
-  padding: 15px 10px 15px 0;
 }
