@@ -5,6 +5,10 @@ function moveToSecondScreen() {
     var audioFadeSpeed = 3500;
     var videoFadeSpeed = 1500;
 
+    var aboutAccordion = $('.accordion.about');
+    aboutAccordion.find('.panel').show();
+    aboutAccordion.addClass('open');
+
     // fades out video over 1.5s
     $('.player').fadeOut(videoFadeSpeed, function() {
       $(this).find('video').remove();
