@@ -2,14 +2,6 @@
 // CONTENT
 // -------------------------------------------
 
-
-@media (max-width: 1024px) {
-  .projects .image {
-    min-height: 385px;
-  }
-}
-
-
 // menu item headings
 .title {
   width: 100%;
@@ -23,6 +15,11 @@
     padding-top: 14px;
     padding-bottom: 17px;
   }
+}
+
+// Styles for open & close buttons
+.control {
+  padding: 15px 10px 15px 0;
 }
 
 // all text
