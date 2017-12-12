@@ -21,7 +21,7 @@ function moveToSecondScreen() {
 CUSTOM CURSOR:
 ----------------------------------------------*/
 // CUSTOM CURSOR (IMAGE FOLLOWING MOUSE):
-$('.video').mousemove(function (e) {
+$('.fullscreen').mousemove(function (e) {
   $('.cursor-custom').show().css({
     "left": e.clientX,
     "top": e.clientY
@@ -33,12 +33,12 @@ VIDEO:
 ----------------------------------------------*/
 
 // CLICKING VIDEO:
-$('.video').on('click touchstart', function() {
+$('.fullscreen').on('click touchstart', function() {
   moveToSecondScreen();
 });
 
 // END OF VIDEO:
-$('.video').on('loadedmetadata',function(){
+$('.fullscreen').on('loadedmetadata',function(){
   if ($(window).width() > 768) {
     var fadeOutTrigger = parseInt((this.duration-5)*1000);
     setTimeout(function() {
