@@ -36,6 +36,11 @@
   width: 74px;
   height: 16px;
   left: -100px;
+  z-index: 10;
   cursor: none;
   pointer-events: none;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 60px;
+    height: 13px;
+  }
 }
