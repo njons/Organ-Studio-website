@@ -2,6 +2,7 @@
 // CONTENT
 // -------------------------------------------
 
+
 @media (max-width: 1024px) {
   .projects .image {
     min-height: 385px;
@@ -73,12 +74,13 @@
     padding-top: 8px;
     display: none;
   }
-  & .text {
-  @media (max-width: 1024px) {
-    padding-top: 15px;
-  }
-  @media (max-width: 768px) {
-    padding-top: 19px;
+  .text {
+    @media (max-width: 1024px) {
+      padding-top: 15px;
+    }
+    @media (max-width: 768px) {
+      padding-top: 19px;
+    }
   }
 }
 
@@ -93,10 +95,10 @@
     padding-top: 17px;
     padding-bottom: 6px;
   }
-  & .text {
-  font-size: 17px;
-  line-height: 21px;
-  text-transform: uppercase;
+  .text {
+    font-size: 17px;
+    line-height: 21px;
+    text-transform: uppercase;
   }
   @media (max-width: 1024px) {
     padding: 13px 0;
@@ -112,11 +114,14 @@
 // coming soon placeholder (for the +/-)
 .coming-soon {
   text-align: right;
-  width: 170px;
+  width: 220px;
   padding-top: 15px;
   padding-bottom: 0px;
   @media (max-width: 1024px) {
-    padding: 0;
+    padding-top: 12px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 15px;
   }
 }
 
@@ -128,5 +133,4 @@
   @media (max-width: 1024px) {
     padding: 0px;
   }
-}
 }
