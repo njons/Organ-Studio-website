@@ -70,6 +70,7 @@ OBJECT FIT POLYFILL:
 // ON LOAD:
 $(document).ready( function () {
   objectFitVideos();
+  moveToSecondScreen();
 });
 
 /*---------------------------------------------

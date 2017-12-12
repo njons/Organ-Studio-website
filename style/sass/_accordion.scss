@@ -2,40 +2,44 @@
 // ACCORDION
 // -------------------------------------------
 
-.accordion:not(.projects) .title:hover {
-  color: rgb(128, 128, 128);
-}
+.accordion {
 
-.accordion:not(.projects) .title {
-  cursor: pointer;
-}
+  .col-left & {
+    // horizontal lines
+    border-bottom: solid #333 1px;
 
-.col-left .accordion {
-  border-bottom: solid #333 1px;
-  &.contact {
-    @media (max-width: 768px) {
-      border-bottom: 0;
+    // hide last black horizontal line on mobile
+    &.contact {
+      @media (max-width: 768px) {
+        border-bottom: 0;
+      }
+    }
+
+    .heading {
+      cursor: pointer;
+
+      // grey title on hover
+      &:hover .title {
+        color: rgb(128, 128, 128);
+      }
+
+      // icon position
+      .plus-minus {
+        padding-right: 10px;
+      }
     }
   }
-}
 
-.accordion .title.control {
-  cursor: default;
-}
-
-.accordion .title.control:hover {
-  color: inherit;
-}
-
-.accordion.open .close {
-  display: block;
-}
-
-.accordion.open .open {
-  display: none;
-}
-
-// Styles for open & close buttons
-.control {
-  padding: 15px 10px 15px 0;
+  // logic to show-hide the plus-minus
+  .close {
+    display: none;
+  }
+  &.open {
+    .close {
+      display: block;
+    }
+    .open {
+      display: none;
+    }
+  }
 }
