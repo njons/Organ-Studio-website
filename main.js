@@ -2,7 +2,7 @@
 // FUNCTION FOR CLICKING VIDEO:
 function moveToSecondScreen() {
   if (!$('body').hasClass('second-screen')) {
-    var audioFadeSpeed = 3500;
+    var audioFadeSpeed = 4500;
     var videoFadeSpeed = 1500;
 
     var aboutAccordion = $('.accordion.about');
