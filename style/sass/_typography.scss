@@ -14,11 +14,11 @@ body {
 
   // type size for tablet
   @media (min-width: 768px) and (max-width: 1024px) {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 18px;
     .small-type {
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 13px;
+      line-height: 17px;
     }
   }
 }
