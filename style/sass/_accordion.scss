@@ -26,6 +26,9 @@
       // icon position
       .plus-minus {
         padding-right: 10px;
+        @media (max-width: 768px) {
+          padding-right: 0;
+        }
       }
     }
 
@@ -41,6 +44,9 @@
     display: none;
   }
   &.open {
+    .heading{
+      border-bottom: solid #333 1px;
+    }
     .minus {
       display: block;
     }

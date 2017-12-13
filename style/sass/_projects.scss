@@ -16,5 +16,8 @@
     @media (max-width: 1024px) {
       min-height: 385px;
     }
+    @media (max-width: 768px) {
+      margin-top: 0;
+    }
   }
 }

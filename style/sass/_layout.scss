@@ -78,7 +78,10 @@ img {
   flex-shrink: 1;
   padding: 0 20px;
   @media (max-width: 1024px) {
-    padding-left: 18px;
+    padding-left: 20px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 10px;
   }
 
   // container for the left hand content (left column)
@@ -92,7 +95,6 @@ img {
     @media (max-width: 768px) {
       flex-basis: 602px;
       margin-right: 0;
-      padding: 0 15px;
     }
   }
 
@@ -106,10 +108,6 @@ img {
     @media (max-width: 1024px) {
       margin-right: 0px;
       flex-basis: 476px;
-    }
-    @media (max-width: 768px) {
-      margin-right: 0;
-      padding: 0 15px;
     }
   }
 
@@ -126,7 +124,7 @@ img {
   }
 
   @media (max-width: 768px) {
-    padding: 14px 0 17px;
+    padding: 12px 0;
     position: sticky;
     top: 0;
   }
@@ -161,6 +159,8 @@ img {
     display: none;
     @media (max-width: 768px) {
       display: block;
+      padding-top: 10px;
+      padding-bottom: 8px;
     }
   }
 }
@@ -180,7 +180,7 @@ img {
       padding-bottom: 12px;
     }
     @media (max-width: 768px) {
-      padding-top: 8px;
+      padding-top: 7px;
     }
   }
 
@@ -195,7 +195,9 @@ img {
       margin-right: 84px;
     }
     @media (max-width: 768px) {
-      margin-right: 10px;
+      margin-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 
@@ -207,7 +209,7 @@ img {
     // lowercase information at bottom of contact
     .acknowlegement {
       text-transform: none;
-      padding-top: 15px;
+      padding-top: 20px;
       padding-bottom: 10px;
     }
 
