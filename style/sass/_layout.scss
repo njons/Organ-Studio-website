@@ -129,23 +129,23 @@ img {
     display: flex;
     justify-content: flex-end;
     height: 100%;
-    @media (max-width: 768px) {
+    @media (max-width: 870px) {
       display:none;
     }
 
     .footnote {
       flex: 1 1 auto;
       margin-top: auto;
-      padding-top: 20px;
+      padding-top: 8px;
       padding-bottom: 18px;
     }
   }
 
   &-inside {
     display: none;
-    @media (max-width: 768px) {
+    @media (max-width: 870px) {
       display: block;
-      padding-top: 10px;
+      padding-top: 8px;
       padding-bottom: 8px;
     }
   }
