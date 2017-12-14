@@ -12,9 +12,8 @@
     background-image: url('/images/IMG_8375.JPG');
     background-size: cover;
     background-position: center center;
-
-    @media (max-width: 768px) {
-    margin-top: 0;
+    @media (max-width: 870px) {
+      height: 385px;
     }
   }
 }

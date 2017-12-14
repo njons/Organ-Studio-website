@@ -6,14 +6,6 @@
 
   .col-left & {
     // horizontal lines
-    //border-bottom: solid #333 1px;
-
-    // hide last black horizontal line on mobile
-    &.contact {
-      @media (max-width: 768px) {
-      //  border-bottom: 0;
-      }
-    }
 
     .heading {
       cursor: pointer;
