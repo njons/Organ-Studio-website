@@ -11,7 +11,7 @@ body {
   // disable scrolling
   overflow: hidden;
   &.second-screen {
-    // re=enable scrolling when class second-screen is added
+    // re-enable scrolling when class second-screen is added
     overflow: auto;
   }
 
@@ -81,7 +81,9 @@ img {
     padding-left: 20px;
   }
   @media (max-width: 768px) {
-    padding: 0 10px;
+    //padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   // container for the left hand content (left column)
@@ -113,18 +115,18 @@ img {
 
 }
 
-
 // container holding the title and the +/- in the menu
 .heading {
   display: flex;
-  padding: 15px 0;
+  padding: 10px 0;
 
   @media (max-width: 1024px) {
     padding: 12px 0;
   }
 
   @media (max-width: 768px) {
-    padding: 12px 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
     position: sticky;
     top: 0;
   }
@@ -175,7 +177,7 @@ img {
   }
 
   .panel {
-    padding-bottom: 10px;
+    //padding-bottom: 10px;
     @media (max-width: 1024px) {
       padding-bottom: 12px;
     }
@@ -219,6 +221,6 @@ img {
   // coming soon placeholder (for the +/-)
   .coming-soon {
     text-align: right;
-    width: 221px;
+    width: 248px;
   }
 }
