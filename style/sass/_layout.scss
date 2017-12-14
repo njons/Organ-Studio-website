@@ -11,7 +11,7 @@ body {
   // disable scrolling
   overflow: hidden;
   &.second-screen {
-    // re=enable scrolling when class second-screen is added
+    // re-enable scrolling when class second-screen is added
     overflow: auto;
   }
 
@@ -78,7 +78,12 @@ img {
   flex-shrink: 1;
   padding: 0 20px;
   @media (max-width: 1024px) {
-    padding-left: 18px;
+    padding-left: 20px;
+  }
+  @media (max-width: 768px) {
+    //padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   // container for the left hand content (left column)
@@ -92,7 +97,6 @@ img {
     @media (max-width: 768px) {
       flex-basis: 602px;
       margin-right: 0;
-      padding: 0 15px;
     }
   }
 
@@ -107,26 +111,22 @@ img {
       margin-right: 0px;
       flex-basis: 476px;
     }
-    @media (max-width: 768px) {
-      margin-right: 0;
-      padding: 0 15px;
-    }
   }
 
 }
 
-
 // container holding the title and the +/- in the menu
 .heading {
   display: flex;
-  padding: 15px 0;
+  padding: 10px 0;
 
   @media (max-width: 1024px) {
     padding: 12px 0;
   }
 
   @media (max-width: 768px) {
-    padding: 14px 0 17px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     position: sticky;
     top: 0;
   }
@@ -161,6 +161,8 @@ img {
     display: none;
     @media (max-width: 768px) {
       display: block;
+      padding-top: 10px;
+      padding-bottom: 8px;
     }
   }
 }
@@ -175,12 +177,12 @@ img {
   }
 
   .panel {
-    padding-bottom: 10px;
+    //padding-bottom: 10px;
     @media (max-width: 1024px) {
       padding-bottom: 12px;
     }
     @media (max-width: 768px) {
-      padding-top: 8px;
+      padding-top: 7px;
     }
   }
 
@@ -195,7 +197,9 @@ img {
       margin-right: 84px;
     }
     @media (max-width: 768px) {
-      margin-right: 10px;
+      margin-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 
@@ -207,11 +211,8 @@ img {
     // lowercase information at bottom of contact
     .acknowlegement {
       text-transform: none;
-      padding-top: 15px;
+      padding-top: 20px;
       padding-bottom: 10px;
-      @media (max-width: 1024px) {
-        padding: 0px;
-      }
     }
 
   }
@@ -220,6 +221,6 @@ img {
   // coming soon placeholder (for the +/-)
   .coming-soon {
     text-align: right;
-    width: 220px;
+    width: 248px;
   }
 }
