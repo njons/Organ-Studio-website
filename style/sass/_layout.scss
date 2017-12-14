@@ -76,7 +76,7 @@ img {
 .col {
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 0 20px;
+  padding: 10px 20px 0;
   @media (max-width: 1024px) {
     padding-left: 20px;
   }
@@ -118,7 +118,7 @@ img {
 // container holding the title and the +/- in the menu
 .heading {
   display: flex;
-  padding: 10px 0;
+  padding: 8px 0;
 
   @media (max-width: 1024px) {
     padding: 12px 0;
@@ -177,7 +177,6 @@ img {
   }
 
   .panel {
-    //padding-bottom: 10px;
     @media (max-width: 1024px) {
       padding-bottom: 12px;
     }
@@ -187,14 +186,11 @@ img {
   }
 
   p {
-    margin-right: 20px;
+    margin-right: 17px;
     padding-top: 10px;
     padding-bottom: 10px;
     &:hover {
       color: black;
-    }
-    @media (max-width: 1024px) {
-      margin-right: 84px;
     }
     @media (max-width: 768px) {
       margin-right: 20px;
@@ -206,17 +202,19 @@ img {
   &.contact {
     p {
       text-transform: uppercase;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 1px;
     }
 
     // lowercase information at bottom of contact
     .acknowlegement {
       text-transform: none;
-      padding-top: 20px;
+      padding-top: 0px;
       padding-bottom: 10px;
     }
 
   }
-
 
   // coming soon placeholder (for the +/-)
   .coming-soon {
