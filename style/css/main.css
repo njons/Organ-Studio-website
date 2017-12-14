@@ -123,6 +123,10 @@ img {
   padding: 8px 0; }
   @media (max-width: 870px) {
     .heading {
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
       position: sticky;
       top: 0; } }
   .col-left .heading {
