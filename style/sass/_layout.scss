@@ -55,7 +55,7 @@ img {
   opacity: 0;
   min-height: 100vh;
 
-  @media (max-width: 768px) {
+  @media (max-width: 870px) {
     flex-wrap: wrap;
   }
   @media (max-width: 667px) {
@@ -74,13 +74,10 @@ img {
 // COLUMNS
 
 .col {
+  padding: 10px 20px 0 20px;
   flex-grow: 1;
-  flex-shrink: 1;
-  padding: 10px 20px 0;
-  @media (max-width: 1024px) {
-    padding-left: 20px;
-  }
-  @media (max-width: 768px) {
+  flex-shrink: 1.7;
+  @media (max-width: 870px) {
     //padding: 0 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -91,10 +88,7 @@ img {
     flex-basis: 629px;
     display: flex;
     flex-direction: column;
-    @media (max-width: 1024px) {
-      flex-basis: 476px;
-    }
-    @media (max-width: 768px) {
+    @media (max-width: 870px) {
       flex-basis: 602px;
       margin-right: 0;
     }
@@ -107,10 +101,6 @@ img {
     background-color: #000;
     color: white;
     min-height: 100vh;
-    @media (max-width: 1024px) {
-      margin-right: 0px;
-      flex-basis: 476px;
-    }
   }
 
 }
@@ -120,13 +110,7 @@ img {
   display: flex;
   padding: 8px 0;
 
-  @media (max-width: 1024px) {
-    padding: 12px 0;
-  }
-
-  @media (max-width: 768px) {
-    padding-top: 8px;
-    padding-bottom: 8px;
+  @media (max-width: 870px) {
     position: sticky;
     top: 0;
   }
@@ -177,9 +161,6 @@ img {
   }
 
   .panel {
-    @media (max-width: 1024px) {
-      padding-bottom: 12px;
-    }
     @media (max-width: 768px) {
       padding-top: 7px;
     }

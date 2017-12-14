@@ -9,16 +9,7 @@ body {
   line-height: 29px;
   .small-type {
     font-size: 17px;
-    line-height: 21px;
+    line-height: 22px;
   }
 
-  // type size for tablet
-  @media (min-width: 768px) and (max-width: 1024px) {
-    font-size: 14px;
-    line-height: 18px;
-    .small-type {
-      font-size: 13px;
-      line-height: 17px;
-    }
-  }
 }
