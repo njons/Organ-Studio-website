@@ -5,14 +5,16 @@ function moveToSecondScreen() {
     var audioFadeSpeed = 4500;
     var videoFadeSpeed = 1500;
 
-    var aboutAccordion = $('.accordion.about');
-    aboutAccordion.find('.panel').show();
-    aboutAccordion.addClass('open');
 
     // fades out video over 1.5s
     $('.player').fadeOut(videoFadeSpeed, function() {
       $(this).find('video').remove();
       $('body').addClass('second-screen');
+      setTimeout(function() {
+        var aboutAccordion = $('.accordion.about');
+        aboutAccordion.find('.panel').slideDown(1500);
+        aboutAccordion.addClass('open');
+      }, 250);
     });
     // fades out sound over 3.5 seconds (lingering effect)
     $('.sound').animate({volume: 0.0}, audioFadeSpeed);
