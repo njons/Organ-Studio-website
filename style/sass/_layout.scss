@@ -16,7 +16,7 @@ body {
   }
 
   // never disable overflow on mobile
-  @media (max-width: 768px) {
+  @media (max-width: 870px) {
     overflow: auto;
   }
 }
@@ -76,9 +76,7 @@ img {
   flex-grow: 1;
   flex-shrink: 1.7;
   @media (max-width: 870px) {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0px 10px;
   }
 
   // container for the left hand content (left column)
@@ -141,7 +139,7 @@ img {
 
   &-inside {
     display: none;
-    @media (max-width: 768px) {
+    @media (max-width: 870px) {
       display: block;
       padding-top: 10px;
       padding-bottom: 8px;
@@ -158,30 +156,22 @@ img {
     width: 100%;
   }
 
-  .panel {
-    @media (max-width: 768px) {
-      padding-top: 7px;
-    }
-  }
-
   p {
     margin-right: 17px;
-    padding-top: 10px;
+    padding-top: 4px;
     padding-bottom: 10px;
     &:hover {
       color: black;
     }
-    @media (max-width: 768px) {
-      margin-right: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
   }
 
   &.contact {
+    @media (max-width: 870px) {
+      padding-bottom: 0px;
+    }
     p {
       text-transform: uppercase;
-      padding-top: 0px;
+      padding-top: 4px;
       padding-bottom: 0px;
       padding-left: 1px;
     }
@@ -192,7 +182,9 @@ img {
       padding-top: 0px;
       padding-bottom: 10px;
     }
-
+    @media (max-width: 870px) {
+    //  padding-bottom: 12px;
+    }
   }
 
   // coming soon placeholder (for the +/-)
