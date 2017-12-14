@@ -45,7 +45,7 @@ $('.fullscreen').on('click touchstart', function() {
 
 // END OF VIDEO:
 $('.video').on('loadedmetadata',function(){
-  if ($(window).width() > 768) {
+  if ($(window).width() > 870) {
     var fadeOutTrigger = parseInt((this.duration-5)*1000);
     setTimeout(function() {
       moveToSecondScreen();
@@ -58,7 +58,7 @@ SOUND:
 ---------------------------------------------- */
 // ON LOAD:
 $(document).ready( function () {
-  if ($(window).width() > 768) {
+  if ($(window).width() > 870) {
     var s = $('.sound');
     s[0].play();
   }
