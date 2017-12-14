@@ -12,7 +12,7 @@ function moveToSecondScreen() {
       $('body').addClass('second-screen');
       setTimeout(function() {
         var aboutAccordion = $('.accordion.about');
-        aboutAccordion.find('.panel').slideDown(1500);
+        aboutAccordion.find('.panel').slideDown();
         aboutAccordion.addClass('open');
       }, 250);
     });
