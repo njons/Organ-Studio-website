@@ -167,11 +167,11 @@ img {
 .accordion.contact p {
   text-transform: uppercase;
   padding-top: 4px;
-  padding-bottom: 0px;
+  padding-bottom: 18px;
   padding-left: 1px; }
 .accordion.contact .acknowlegement {
   text-transform: none;
-  padding-top: 0px;
+  padding-top: 26px;
   padding-bottom: 10px; }
 .accordion .coming-soon {
   text-align: right;

@@ -175,18 +175,15 @@ img {
     p {
       text-transform: uppercase;
       padding-top: 4px;
-      padding-bottom: 0px;
+      padding-bottom: 18px;
       padding-left: 1px;
     }
 
     // lowercase information at bottom of contact
     .acknowlegement {
       text-transform: none;
-      padding-top: 0px;
+      padding-top: 26px;
       padding-bottom: 10px;
-    }
-    @media (max-width: 870px) {
-    //  padding-bottom: 12px;
     }
   }
 
