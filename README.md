@@ -18,7 +18,7 @@ The design required a video landing page paired with ambient sound and a custom 
 
 ---
 **Video:** 
-- The video was embedded using HTML5 video tags, set to autoplay and mute
+- The video was embedded using HTML5 video tag, set to autoplay and mute
 - Video has been deliberately disabled on tablet and mobile (below 870px) 
 - A still of the first video frame has been added for slow connections
 - The video has a script that triggers an automatic fade of the video 5 sec before its end
@@ -37,7 +37,7 @@ The design required a video landing page paired with ambient sound and a custom 
 ## Details 
 
 **Collaborators**
-- Design by Organ studio 
+- Design by Organ
 - Development by Nathalie Jonsson
 
 **Browser support:** The website works fully on Chrome and Firefox and without sound on Safari and IE 
