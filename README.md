@@ -1,5 +1,8 @@
 # Website for Organ studio 
 
+![Screenshot of landing page](https://github.com/njons/Organ-Studio-website/blob/master/screenshot_landing%20page.png)
+![Screenshot of website](https://github.com/njons/Organ-Studio-website/blob/master/Screenshot_desktop%20website.png)
+
 ## Brief 
 The website for Organ was developed as a small one-page site providing a short introduction and primary contact details. Although small, it needed to feature moving image, sound and large-scale photos to best capture the multidisciplinary nature of their work.
 
